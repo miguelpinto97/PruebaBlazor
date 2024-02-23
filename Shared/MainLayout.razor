@@ -1,0 +1,185 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+
+@using RestauranteVirtual.Web.Models.Administracion;
+@using RestauranteVirtual.Dto.Seguridad.MenuOpciones;
+@using RestauranteVirtual.Dto.Seguridad.Permisos;
+@using RestauranteVirtual.Dto.Notificaciones;
+@using RestauranteVirtual.Web.Shared;
+@using RestauranteVirtual.Web.Components.Modals
+@using RestauranteVirtual.Web.Services.API;
+@using RestauranteVirtual.Web.Services.Authentication;
+@using System.Web;
+@using System.Security.Claims;
+
+<Spinner></Spinner>
+
+<Navbar NombreUsuario="@NombreUsuario" Notificaciones="Notificaciones" />
+
+<div class="page-content" style="display: flex;height: -webkit-fill-available;">
+	<Sidebar Opciones="Opciones" />
+	<div class="content-wrapper" style="overflow-y: auto; margin-top: 64px;">
+        <body>
+
+			<!-- Page content -->
+			<div class="page-content">
+
+				<!-- Main content -->
+				<div class="content-wrapper">
+
+					<!-- Inner content -->
+					<div class="content-inner">
+						@Body
+					</div>
+					<!-- /inner content -->
+
+				</div>
+				<!-- /main content -->
+
+			</div>
+			<!-- /page content -->
+        </body>
+
+		<!-- Footer -->
+		<div class="navbar navbar-sm navbar-footer border-top">
+			<div class="container-fluid">
+				<span>&copy; 2024 - Restaurante Web</span>
+				<div>
+					@*@Fecha.ToStringFecha()*@
+				</div>
+			</div>
+		</div>
+		<!-- /footer -->
+
+	</div>
+
+</div>
+@code {
+
+	[Inject] CustomAuthenticationStateProvider CustomAuthenticationStateProvider { get; set; }
+	[Inject] NavigationManager _navigationManager { get; set; }
+	[Inject] IAuthService _authService { get; set; }
+	[Inject] MenuOpcionesService _menuOpcionesService { get; set; }
+	[Inject] NotificacionesService _notificacionesService { get; set; }
+	public string NombreUsuario { get; set; }
+	private List<MenuOpcionDto> MenuOpciones { get; set; } = new();
+	private List<PermisoDto> Permisos { get; set; }
+	public List<MenuOpcionModel> Opciones { get; set; } = new();
+	private bool MenuLoaded { get; set; }
+	private DateTime Fecha { get; set; }
+	public string VersionWeb { get; set; }
+	public string VersionApi { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+
+		Version version = typeof(Program).Assembly.GetName().Version;
+		VersionWeb = $"{version.Build.ToString().PadLeft(4, '0')}.{version.Revision}";
+
+		//if (_navigationManager.Uri.Contains("/CrearContrasena") || _navigationManager.Uri.Contains("/CambiarContrasena")
+		//|| _navigationManager.Uri.Contains("/Login") || _navigationManager.Uri.Contains("/RecuperarContrasena"))
+		//	return;
+
+		//var userState = await CustomAuthenticationStateProvider.GetAuthenticationStateAsync();
+		//if (!userState.User.Identity.IsAuthenticated)
+		//{
+		//	_navigationManager.NavigateTo("/Login?returnUrl=" + HttpUtility.UrlEncode(_navigationManager.ToBaseRelativePath(_navigationManager.Uri)), forceLoad: false);
+		//}
+		//else
+		//{
+		//	var userClaim = userState.User.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Name);
+		//	if (userClaim == null) return;
+		//	NombreUsuario = userClaim.Value;
+		//	var menuOpciones = await _menuOpcionesService.Listar();
+		//	Permisos = await _authService.ListarPermisos();
+
+		//	try
+		//	{
+		//		Fecha = await _authService.ObtenerFecha();
+		//	}
+		//	catch (HttpRequestException ex)
+		//	{
+		//		//_navigationManager.NavigateTo(HttpUtility.UrlEncode(_navigationManager.ToBaseRelativePath(_navigationManager.Uri)));
+
+		//	}
+
+
+		//	foreach (var permiso in Permisos)
+		//	{
+		//		var opcionId = permiso.MenuOpcionId;
+		//		do
+		//		{
+		//			var opcion = menuOpciones.FirstOrDefault(x => x.Id == opcionId);
+		//			if (opcion != null)
+		//			{
+		//				if (!MenuOpciones.Any(x => x.Id == opcionId))
+		//				{
+		//					MenuOpciones.Add(new MenuOpcionDto()
+		//						{
+		//							Id = opcion.Id,
+		//							Icono = opcion.Icono,
+		//							Nombre = opcion.Nombre,
+		//							PadreId = opcion.PadreId,
+		//							Url = opcion.Url,
+		//							Orden = opcion.Orden
+		//						});
+		//				}
+		//				opcionId = opcion.PadreId;
+		//			}
+		//			else
+		//			{
+		//				opcionId = null;
+		//			}
+
+		//		} while (!string.IsNullOrEmpty(opcionId));
+		//	}
+
+		//	Opciones = ConvertirMenuOpcionesEnArbol(null);
+		//}
+	}
+
+
+	protected override async void OnAfterRender(bool firstRender)
+	{
+		if (!MenuLoaded && Opciones.Count > 0)
+		{
+			await JS.InvokeVoidAsync("InicializarNavBar");
+			MenuLoaded = true;
+			StateHasChanged();
+
+
+			//TimerCallback timerCallback = new TimerCallback(ObtenerNotificaciones);
+
+			//Timer timer = new Timer(timerCallback, null, 0, 1000 * 60 * 10);
+
+		}
+	}
+
+	private List<MenuOpcionModel> ConvertirMenuOpcionesEnArbol(string idPadre = null)
+	{
+		List<MenuOpcionModel> hijos = MenuOpciones
+			.Where(opcion => opcion.PadreId == idPadre)
+			.Select(opcion => new MenuOpcionModel
+				{
+					Id = opcion.Id,
+					Nombre = opcion.Nombre,
+					Url = opcion.Url,
+					Icono = opcion.Icono,
+					Orden = opcion.Orden,
+					Opciones = ConvertirMenuOpcionesEnArbol(opcion.Id)
+				})
+				.OrderBy(x => x.Orden)
+				.ToList();
+
+		return hijos;
+	}
+
+	public List<NotificacionDto> Notificaciones = new List<NotificacionDto>();
+
+	public async void ObtenerNotificaciones(object state)
+	{
+		Notificaciones = await _notificacionesService.ObtenerNotificaciones(10);
+		StateHasChanged();
+	}
+}
+

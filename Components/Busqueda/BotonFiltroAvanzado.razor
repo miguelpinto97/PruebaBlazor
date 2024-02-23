@@ -1,0 +1,18 @@
+﻿<div style="display:inline-block">
+    <button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="@TargetCollapse" @onclick="RealizarAccion">
+		<i class="@claseFilter"></i>
+	</button>
+</div>
+
+@code {
+    [Parameter] public string TargetCollapse { get; set; }
+    private string claseFilter = "icon-filter4";
+    private bool filtroActivado = false;
+
+    public void RealizarAccion()
+    {
+        filtroActivado = !filtroActivado;
+        claseFilter = filtroActivado ? "icon-filter3" : "icon-filter4";
+        StateHasChanged();
+    }
+}

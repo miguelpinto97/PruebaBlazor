@@ -1,0 +1,414 @@
+﻿@page "/Administracion/{TipoVista}/{AccionVista}"
+@page "/Administracion/{TipoVista}/{AccionVista}/{IdPersonaActualizar:int}"
+
+@inject HttpClient Http
+@inject IJSRuntime JS
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using RestauranteVirtual.Web.Components.Iconos
+@using RestauranteVirtual.Web.Components.Busqueda
+@using RestauranteVirtual.Web.Components.Validacion
+@using RestauranteVirtual.Web.Components.Mensajes
+@using RestauranteVirtual.Web.Utils.Constants;
+
+<!-- Page header -->
+<div class="page-header page-header-light shadow">
+	<div class="page-header-content d-lg-flex">
+		<div class="d-flex">
+			<h4 class="page-title mb-0">
+
+				@(AccionVista == "Actualizar" ? $"Actualización de {TipoVista}" : $"Creación de {TipoVista}")
+				
+			</h4>
+
+			<a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="page-header-content d-lg-flex border-top">
+		<div class="d-flex">
+			<div class="breadcrumb py-2">
+				<a href="index.html" class="breadcrumb-item"><i class="ph-house"></i></a>
+				<a href="#" class="breadcrumb-item">Administración</a>
+				<a href=@($"/Administracion/{TipoVista}") class="breadcrumb-item">@TipoVista</a>
+				<span class="breadcrumb-item active">@AccionVista</span>
+			</div>
+
+			<a href="#breadcrumb_elements" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+
+	</div>
+</div>
+<!-- /page header -->
+<!-- Profile navigation -->
+
+<div class="navbar navbar-expand-lg border-bottom py-2" style="margin-top: 10px">
+
+	<div class="col-lg-9 col-md-8 col-sm-6 col-6">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav flex-row flex-fill">
+				<li class="nav-item me-1">
+					<a href="#datos_generales" class="navbar-nav-link navbar-nav-link-icon active rounded" data-bs-toggle="tab">
+						<div class="d-flex align-items-center mx-lg-1">
+							<i class="ph-clipboard-text"></i>
+							<span class="d-none d-lg-inline-block ms-2">Datos Generales</span>
+						</div>
+					</a>
+				</li>
+				@if(TipoVista == "Profesores")
+				{
+					<li class="nav-item me-1">
+						<a href="#asignaciones" class="navbar-nav-link navbar-nav-link-icon rounded" data-bs-toggle="tab">
+							<div class="d-flex align-items-center mx-lg-1">
+								<i class="ph ph-notepad"></i>
+								<span class="d-none d-lg-inline-block ms-2">
+									Asignaciones
+								</span>
+							</div>
+						</a>
+					</li>
+				}
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="col-lg-3 col-md-4 col-sm-6 col-6" id="profile_nav">
+		<ul class="navbar-nav ms-lg-auto mt-2 mt-lg-0 BotonesCabeceraFormulario">
+			<li class="nav-item ms-lg-1">
+				<div style="display:inline-block">
+					<a class="btn btn-light" href=@($"/Administracion/{TipoVista}")>
+						<i class="ph-arrow-left me-2"></i>
+						Regresar
+					</a>
+				</div>
+			</li>
+
+			<li class="nav-item ms-lg-1">
+
+				<div style="display:inline-block">
+					<button type="submit" class="btn btn-light" @onclick=Configurar>
+						<i class="ph-floppy-disk-back me-2"></i>
+						Guardar
+					</button>
+				</div>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+<!-- /profile navigation -->
+
+
+	        <EditForm EditContext="_editContext">
+            <CustomFormValidator @ref="customFormValidator"></CustomFormValidator>
+            <PanelMensaje Mensaje="@MensajeError" TipoPanel="@UserInterfaceConstants.TipoPanel.ERROR"></PanelMensaje>
+		<!-- Content area -->
+				<div class="content">
+
+					<!-- Inner container -->
+					<div class="d-flex align-items-stretch align-items-lg-start flex-column flex-lg-row">
+
+						<!-- Left content -->
+						<div class="tab-content flex-fill order-2 order-lg-1">
+							<div class="tab-pane fade active show" id="datos_generales">
+
+								<!-- Datos Generales -->
+								<div class="card">
+									<div class="card-body">
+										<div class="mb-3">
+											<div class="row">
+												<div class="col-sm-6">
+													<label class="form-label">Nombre: (*)</label>
+													<InputText class="form-control form-control-sm" @bind-Value="AlumnoRequest.Nombre"/>
+                                                    <CustomValidationMessage For="@(() => AlumnoRequest.Nombre)" Class="invalid-feedback" />												
+													</div>
+
+												<div class="col-sm-3 mt-3 mt-sm-0">
+													<label class="form-label">Apellido Paterno: (*)</label>
+													<InputText class="form-control form-control-sm" @bind-Value="AlumnoRequest.ApellidoPaterno"/>
+                                                    <CustomValidationMessage For="@(() => AlumnoRequest.ApellidoPaterno)" Class="invalid-feedback" />													
+
+												</div>
+
+												<div class="col-sm-3 mt-3 mt-sm-0">
+													<label class="form-label">Apellido Materno: (*)</label>
+													<InputText class="form-control form-control-sm" @bind-Value="AlumnoRequest.ApellidoMaterno"/>
+                                                    <CustomValidationMessage For="@(() => AlumnoRequest.ApellidoMaterno)" Class="invalid-feedback" />	
+												</div>
+
+												
+											</div>
+										</div>
+
+										<div class="mb-3">
+											<div class="row">
+												<div class="col-sm-2">
+													<label class="form-label">F. Nacimiento: (*)</label>
+													<InputDate class="form-control form-control-sm" @bind-Value="AlumnoRequest.FechaNacimiento"/>
+                                                    <CustomValidationMessage For="@(() => AlumnoRequest.FechaNacimiento)" Class="invalid-feedback" />
+												</div>
+												
+												<div class="col-sm-2 mt-3 mt-sm-0">
+													<label class="form-label">Género: (*)</label>
+										            <InputSelect class="form-select form-select-sm" @bind-Value="AlumnoRequest.GeneroId" >
+													<option value="">Seleccione</option>
+														@if (BaseInfo != null)
+														{
+															if (BaseInfo.Generos != null)
+															{
+																foreach (var x in BaseInfo.Generos)
+																{
+																<option value="@x.Key">@x.Value</option>
+																}
+															}
+
+														}
+													</InputSelect>
+													<CustomValidationMessage For="@(() => AlumnoRequest.GeneroId)" Class="invalid-feedback"  />
+												</div>
+									@if(TipoVista == "Alumnos")
+									{
+										<div class="col-sm-2 mt-3 mt-sm-0">
+											<label class="form-label">Salón: (*)</label>
+											<InputSelect class="form-select form-select-sm" @bind-Value="AlumnoRequest.SalonId">
+												<option value="">Seleccione</option>
+												@if (BaseInfo != null)
+												{
+													if (BaseInfo.Salones != null)
+													{
+														foreach (var x in BaseInfo.Salones)
+														{
+															<option value="@x.Key">@x.Value</option>
+														}
+													}
+
+												}
+											</InputSelect>
+											<CustomValidationMessage For="@(() => AlumnoRequest.SalonId)" Class="invalid-feedback" />
+										</div>
+
+										<div class="col-sm-3 mt-3 mt-sm-0">
+											<label class="form-label">N° Doc. Padre/Madre: (*)</label>
+											<InputText list="salones" class="form-control form-control-sm" @bind-Value="AlumnoRequest.NumeroWhatsappPadre"></InputText>
+
+											<datalist id="salones">
+												<option value="">Seleccione</option>
+												@if (BaseInfo != null)
+												{
+													if (BaseInfo.Padres != null)
+													{
+														foreach (var x in BaseInfo.Padres)
+														{
+															<option value="@x.NumeroWhatsapp"></option>
+														}
+													}
+
+												}
+											</datalist>
+											<CustomValidationMessage For="@(() => AlumnoRequest.NumeroWhatsappPadre)" Class="invalid-feedback" />
+										</div>
+										@if (BaseInfo != null)
+										{
+											if (BaseInfo.Padres != null)
+											{
+												if(BaseInfo.Padres.Any(x=>x.NumeroWhatsapp == AlumnoRequest.NumeroWhatsappPadre))
+												{
+													<div class="col-sm-3 mt-3 mt-sm-0">
+														<label class="form-label">Nombre Padre/Madre:</label>
+														<label class="form-control form-control-sm">@BaseInfo.Padres.FirstOrDefault(x=>x.NumeroWhatsapp == AlumnoRequest.NumeroWhatsappPadre).NombreCompleto</label>
+													</div>
+												}
+
+											}
+
+										}										
+									}
+									else
+									{
+
+										<div class="col-sm-2 mt-3 mt-sm-0">
+											<label class="form-label">Tipo Doc.: (*)</label>
+											<InputSelect class="form-select form-select-sm" @bind-Value="AlumnoRequest.TipoDocumentoId">
+												<option value="">Seleccione</option>
+												@if (BaseInfo != null)
+												{
+													if (BaseInfo.TiposDocumento != null)
+													{
+														foreach (var x in BaseInfo.TiposDocumento)
+														{
+															<option value="@x.Key">@x.Value</option>
+														}
+													}
+
+												}
+											</InputSelect>
+											<CustomValidationMessage For="@(() => AlumnoRequest.TipoDocumentoId)" Class="invalid-feedback" />
+										</div>
+										<div class="col-sm-2 mt-3 mt-sm-0">
+											<label class="form-label">N° Doc.: (*)</label>
+											<InputText class="form-control form-control-sm" @bind-Value="AlumnoRequest.NumeroWhatsapp" />
+											<CustomValidationMessage For="@(() => AlumnoRequest.NumeroWhatsapp)" Class="invalid-feedback" />
+										</div>
+										<div class="col-sm-4 mt-3 mt-sm-0">
+											<label class="form-label">Correo: (*)</label>
+											<InputText class="form-control form-control-sm" @bind-Value="AlumnoRequest.Correo" />
+											<CustomValidationMessage For="@(() => AlumnoRequest.Correo)" Class="invalid-feedback" />
+										</div>
+
+									}
+
+											</div>
+										</div>
+
+
+
+									</div>
+
+								</div>
+								<!-- /Datos Generales -->
+
+
+						    </div>
+				@if(TipoVista == "Profesores")
+				{
+					<div class="tab-pane fade active" id="asignaciones">
+
+						<!-- Datos Generales -->
+						<div class="card">
+							<div class="card-body">
+								<div class="mb-3">
+									<div class="row">
+
+										<div class="col-sm-4">
+											<select class="form-select" @bind=AsignacionCursoId>
+												<option value="">Cursos</option>
+												@if (BaseInfo != null)
+												{
+													if (BaseInfo.Cursos != null)
+													{
+														foreach (var x in BaseInfo.Cursos)
+														{
+															<option value=@x.Key>@x.Value</option>
+														}
+													}
+												}
+											</select>
+
+										</div>
+
+										<div class="col-sm-4  mt-3 mt-sm-0">
+											<select class="form-select" @bind=AsignacionSalonId>
+												<option value="">Salones</option>
+												@if (BaseInfo != null)
+												{
+													if (BaseInfo.Salones != null)
+													{
+														foreach (var x in BaseInfo.Salones)
+														{
+															<option value=@x.Key>@x.Value</option>
+														}
+													}
+												}
+											</select>
+										</div>
+
+										<div class="col-sm-4  mt-3 mt-sm-0">
+											<button class="btn btn-light" style="margin: auto;display: block;" @onclick=AgregarAsignacion>
+												Asignar Curso - Salón
+											</button>
+
+										</div>
+
+
+
+									</div>
+								</div>
+
+
+								<div class="navbar shadow rounded py-1 mb-3">
+									<div class="table-responsive w-100">
+										<table class="table table-sm">
+											<thead>
+												<tr>
+
+
+													<th>
+														Curso
+													</th>
+													<th>
+														Salón
+													</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+
+
+												@if (AlumnoRequest.AsignacionesCursoSalon != null)
+												{
+													if (AlumnoRequest.AsignacionesCursoSalon.Any())
+													{
+
+														foreach (var reg in AlumnoRequest.AsignacionesCursoSalon)
+														{
+															<tr>
+
+																<td>@(BaseInfo?.Cursos?.FirstOrDefault(x => x.Key == reg.CursoId).Value ?? "")</td>
+																<td>@(BaseInfo?.Salones?.FirstOrDefault(x => x.Key == reg.SalonId).Value ?? "")</td>
+																<td>
+																	<div class="d-inline-flex ">
+
+																		<a class="text-body acciones" @onclick="e=>AlumnoRequest.AsignacionesCursoSalon.Remove(reg)">
+																			<i class="ph-x"></i>
+																		</a>
+																	</div>
+																</td>
+															</tr>
+														}
+													}
+												}
+
+
+
+
+
+
+											</tbody>
+										</table>
+									</div>
+
+
+								</div>
+
+
+
+							</div>
+
+						</div>
+						<!-- /Datos Generales -->
+
+
+					</div>
+
+				}
+
+			</div>
+						<!-- /left content -->
+
+					</div>
+					<!-- /inner container -->
+
+				</div>
+				<!-- /content area -->
+</EditForm>

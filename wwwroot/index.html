@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Salchipapa Andina</title>
+    <base href="/" />
+
+
+    <!-- Estilos Limitless -->
+
+    <link href="assets/css/all.min.css" rel="stylesheet" />
+    <link href="assets/icons/phosphor/styles.min.css" rel="stylesheet" />
+    <link href="assets/icons/icomoon/styles.min.css" rel="stylesheet" />
+    <link href="assets/icons/fontawesome/styles.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+
+    <!-- Bootstrap library -->
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="assets/js/bootstrap/bootbox.min.js"></script>
+    <script src="assets/js/bootstrap/components_modals.js"></script>
+
+    <!-- jQuery library -->
+    <script src="assets/js/jquery/jquery.min.js"></script>
+
+
+    <!-- Load plugin -->
+    <script src="assets/js/vendor/notifications/sweet_alert.min.js"></script>
+
+    <script src="assets/js/vendor/forms/selects/select2.min.js"></script>
+    <script src="assets/js/vendor/forms/selects/bootstrap_multiselect.js"></script>
+
+    <script src="assets/js/vendor/notifications/noty.min.js"></script>
+    <script src="assets/js/vendor/forms/tags/tokenfield.min.js"></script>
+
+    <script src="assets/js/vendor/notifications/components_popovers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+    <script src="assets/js/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+
+    <script src="assets/js/vendor/trees/fancytree_all.min.js"></script>
+    <script src="assets/js/vendor/trees/fancytree_childcounter.js"></script>
+    <script src="assets/js/vendor/trees/fancytree.dnd5.js"></script>
+
+</head>
+
+<body>
+    <div id="app" style=" display: flex; flex-wrap: wrap; height: -webkit-fill-available; overflow-y: auto; ">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        function InicializarSelect2(IdHtml, NombreMetodoOnChange, dotnethelper) {
+
+            $('#' + IdHtml).select2();
+            $('#' + IdHtml).on('select2:select', function (e) {
+                if (dotnethelper != null) {
+                    dotnethelper.invokeMethodAsync(NombreMetodoOnChange, e.params.data.id)
+                }
+            });
+        }
+
+        function SeleccionarSelect2(IdHtml, valores) {
+            $('#' + IdHtml).val(valores);
+            $('#' + IdHtml).trigger('change');
+        }
+
+        function ObtenerValoresSelect2(IdHtml) {
+            return $('#' + IdHtml).val();
+        }
+        function ObtenerValorSelect2(IdHtml) {
+            return $('#' + IdHtml).val();
+        }
+        function SetearSelect2(IdHtml, valor) {
+            $('#' + IdHtml).val(valor);
+            $('#' + IdHtml).trigger('change');
+        }
+        function MostrarMensajeExito_Swal(mensaje) {
+
+            Swal.fire({
+                icon: 'success',
+                title: '¡Operación realizada exitosamente!',
+                text: mensaje,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                }
+            }
+            )
+        }
+        function MostrarMensajeAlerta(mensaje) {
+
+            Swal.fire({
+                icon: 'warning',
+                title: 'Alerta',
+                text: mensaje,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                }
+            }
+            )
+        }
+        function MostrarMensajeErrorBloqueante(mensaje) {
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Alerta',
+                text: mensaje,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                }
+            }
+            )
+        }
+
+        function MostrarMensajeExito() {
+            new Noty({
+                type: 'success',
+                text: '¡Operación realizada exitosamente!',
+                layout: 'bottomRight',
+                timeout: 3500
+            }).show();
+        }
+        function MostrarMensajeExitoPersonalizado(mensaje) {
+            new Noty({
+                type: 'success',
+                text: mensaje,
+                layout: 'bottomRight',
+                timeout: 1000
+            }).show();
+        }
+        function MostrarMensajeError() {
+            new Noty({
+                type: 'error',
+                text: '¡No se pudo realizar la operación!',
+                layout: 'bottomRight',
+                timeout: 3500
+            }).show();
+        }
+
+        function MostrarErrorPersonalizado(mensaje) {
+            new Noty({
+                type: 'error',
+                text: mensaje,
+                layout: 'bottomRight',
+                timeout: 3500
+            }).show();
+        }
+
+        function InicializarMultiselect(IdHtml, NombreMetodoOnChange, dotnethelper) {
+            $('#' + IdHtml).multiselect({
+                onChange: function (element, checked) {
+                    var seleccionados = $('#' + IdHtml).val();
+                    dotnethelper.invokeMethodAsync(NombreMetodoOnChange, seleccionados);
+                },
+                onSelectAll: function (element, checked) {
+                    var seleccionados = $('#' + IdHtml).val();
+                    dotnethelper.invokeMethodAsync(NombreMetodoOnChange, seleccionados);
+                },
+                onDeselectAll: function (element, checked) {
+                    var seleccionados = $('#' + IdHtml).val();
+                    dotnethelper.invokeMethodAsync(NombreMetodoOnChange, seleccionados);
+                }
+            });
+        }
+
+        function InicializarMultiselectSinEvento(IdHtml) {
+            $('#' + IdHtml).multiselect();
+        }
+
+        function ObtenerSeleccionadosMultiSelect(IdHtml) {
+            let seleccionados = $('#' + IdHtml).val();
+            return seleccionados;
+        }
+
+        function CheckearMultiSelect(IdHtml, valores) {
+            $('#' + IdHtml).multiselect('select', valores);
+        }
+        function DesCheckearMultiSelect(IdHtml) {
+            $('option', $('#' + IdHtml)).each(function (element) {
+                $('#' + IdHtml).multiselect('deselect', $(this).val());
+            });
+
+        }
+
+
+
+        function AbrirModal(IdHtml) {
+            $('#' + IdHtml).modal('show');
+        }
+        function AbrirModalEstatico(IdHtml){
+            $('#' + IdHtml).modal('show',{ backdrop: 'static', keyboard: false });
+
+        }
+        function CerrarModal(IdHtml) {
+            $('#' + IdHtml).modal('hide');
+        }
+
+        function InicializarNavBar() {
+            // When content is loaded
+            App.initCore();
+
+            // When page is fully loaded
+            App.initAfterLoad();
+
+        }
+
+
+        function InicializarTrees(IdHtml) {
+            $('#' + IdHtml).fancytree({
+                checkbox: true,
+                selectMode: 3
+            });
+        }
+
+        function MarcarNodos(IdHtml, Valores) {
+            $.ui.fancytree.getTree('#' + IdHtml).selectAll(false);
+            $.ui.fancytree.getTree('#' + IdHtml).visit(function (node) {
+                if (Valores.indexOf(node.data.nodoid) !== -1) {
+                    node.setSelected(true);
+                }
+            });
+        }
+
+        function ListarNodosSeleccionados(IdHtml, tipo) {
+            let ids = [];
+            let nodes = $.ui.fancytree.getTree('#' + IdHtml).getSelectedNodes();
+            console.log(nodes);
+            $.each(nodes, function (i, nodo) {
+                console.log(nodo);
+                if (nodo.data.tipo == tipo) {
+                    ids.push(nodo.data.nodoid);
+                }
+            });
+            return ids;
+        }
+
+        function InicializarCalendario(IdHtml) {
+
+
+            // Button class options
+            $('#' + IdHtml).daterangepicker({
+                parentEl: '.content-inner',
+                applyClass: 'btn-success',
+                cancelClass: 'btn-danger'
+            });
+
+
+
+        }
+
+        function CheckboxAsignarValor(IdHtml, valor) {
+            $('#' + IdHtml).prop("checked", valor);
+        }
+
+
+        function InicializarTag(IdHtml) {
+            new Tokenfield({
+                el: document.querySelector('#' + IdHtml),
+                newItems: true
+            });
+
+            //$('#' + IdHtml).Tokenfield({
+            //    newItems: true
+            //});
+            // Basic initialization
+            //document.querySelectorAll('#' + IdHtml).forEach(function (element) {
+            //    const tfBasic = new Tokenfield({
+            //        el: element,
+            //        items: []
+            //    });
+            //});
+
+        }
+
+        function ObtenerValoresTag(IdHtml) {
+            let seleccionados = $('#' + IdHtml).val();
+            console.log(seleccionados);
+            return seleccionados;
+        }
+
+        function InicializarSelectTag(IdHtml) {
+
+            $('#' + IdHtml).select2();
+
+
+        }
+
+        function DownloadFile(fileName, mimeType, fileContent) {
+            var blob = new Blob([fileContent], { type: mimeType });
+
+            var link = document.createElement('a');
+            link.download = fileName;
+            link.href = window.URL.createObjectURL(blob);
+            link.click();
+        }
+
+        var calendarSelectableInit = {};
+
+        function InicializarCalendario2(IdHtml, events, NombreMetodoOnClick, dotnethelper) {
+
+
+            const calendarSelectableElement = document.querySelector('#' + IdHtml);
+
+            var today = new Date();
+            var fecha = today.toISOString().substring(0, 10);
+
+
+            // Initialize
+            if (calendarSelectableElement) {
+                calendarSelectableInit = new FullCalendar.Calendar(calendarSelectableElement, {
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+
+                    },
+                    initialDate: fecha,
+                    locale: 'es',
+                    navLinks: true, // can click day/week names to navigate views
+                    selectable: true,
+                    selectMirror: true,
+                    businessHours: true,
+                    events: events,
+                    select: function (arg) {
+                        dotnethelper.invokeMethodAsync(NombreMetodoOnClick, arg.start);
+                        calendarSelectableInit.unselect();
+                    },
+                    eventClick: function (arg) {
+
+                    },
+                    editable: true,
+                    direction: document.dir == 'rtl' ? 'rtl' : 'ltr',
+                    dayMaxEvents: true // allow "more" link when too many events
+                });
+
+                // Init
+                calendarSelectableInit.render();
+
+                // Resize calendar when sidebar toggler is clicked
+                document.querySelectorAll('.sidebar-control').forEach(function (sidebarToggle) {
+                    sidebarToggle.addEventListener('click', function () {
+                        calendarSelectableInit.updateSize();
+                    })
+                });
+            }
+
+
+        }
+
+        function EventoAgregado(IdHtml, fecha, titulo, color) {
+
+            calendarSelectableInit.addEvent({
+
+                title: titulo,
+                start: fecha,
+                color: color
+            });
+
+        }
+
+        function MultiSelectConfig() {
+            console.log("MultiSelectConfig");
+            $('.multiselect-item').on('click', function (event) { event.stopPropagation(); });
+            $('.multiselect-all').on('click', function (event) { event.stopPropagation(); });
+        }
+
+        function StopPropagation() {
+            console.log("stopPropagation");
+            event.stopPropagation();
+        }
+
+        function Imprimir(IdHtml) {
+
+            // Obtén el elemento del iframe por su ID
+            var iframe = document.getElementById(IdHtml);
+
+            // Define el contenido del documento HTML
+            var content = document.getElementById(IdHtml).innerHTML;
+
+            //// Agrega estilos de página
+            //var pageStyle = "<style>@page { size: auto; margin: 5mm; }";
+            //pageStyle += "body { margin: 30mm 10mm; }</style>";
+
+            //// Agrega el pie de página
+            //var footerStyle = "<style>@page { @bottom-center { content: element(footer); } }</style>";
+
+            //// Combina el contenido con los estilos y el pie de página
+            //content = pageStyle + footerStyle + content + footerText;
+
+            // Establece el contenido modificado en el iframe
+            iframe.setAttribute('srcdoc', content);
+
+            var alturaDelIframe = iframe.clientHeight; // O puedes usar iframe.clientHeight;
+
+            console.log('Altura del iframe:', alturaDelIframe, 'px');
+
+
+
+            // Espera un momento antes de imprimir para asegurarse de que el iframe haya cargado el contenido
+            setTimeout(function () {
+                iframe.contentWindow.print();
+                iframe.setAttribute('srcdoc', ''); // Limpia el contenido después de imprimir
+            }, 1000);
+
+
+
+        }
+
+        function Imprimir_PrintArea(IdHtml) {
+            var divframe = document.getElementById(IdHtml);
+            console.log('Altura del div:', divframe.clientHeight, 'px');
+            $("#" + IdHtml).printArea();
+
+        }
+
+        function Imprimir_PrintThis(IdHtml) {
+            $("#" + IdHtml).printThis({
+                importCSS: true,
+                importStyle: true,
+                header: null,
+                footer: null,
+                pageTitle: "",
+                orientation: 'landscape',
+                margin: {
+                    top: 40,
+                    bottom: 40,
+                }
+            });
+
+            var iframes = document.getElementsByTagName('iframe');
+
+            // Convierte la lista de iframes en un array para poder recorrerla
+            var iframesArray = Array.from(iframes);
+
+            // Espera 3 segundos y luego elimina los iframes
+            setTimeout(function () {
+                iframesArray.forEach(function (iframe) {
+                    iframe.parentNode.removeChild(iframe);
+                });
+            }, 3000); // 3000 milisegundos = 3 segundos
+        }
+
+        function IniciarTooltip() {
+            setTimeout(function () {
+                $('[data-bs-popup="tooltip"]').tooltip();
+            }, 2000);
+
+        }
+
+        //Noty Extra
+
+        Noty.overrideDefaults({
+            theme: 'limitless',
+            layout: 'topRight',
+            type: 'alert',
+            timeout: 2500
+        });
+
+        function MoverModal() {
+            let $modal = $(".modal");
+            $modal.draggable({
+                handle: ".modal-header",
+            });
+        }
+        function generarClickEnElemento(id) {
+            var elemento = document.getElementById(id);
+            if (elemento) {
+                elemento.click();
+            }
+        }
+
+
+        // Función para disparar el evento mouseover
+        function dispararMouseOver(id) {
+            // Obtener el elemento por su ID
+            var elemento = document.getElementById(id);
+
+            // Crear un evento mouseover
+            var evento = new Event('mouseenter');
+
+            // Disparar el evento en el elemento
+            elemento.dispatchEvent(evento);
+        }
+
+        function EfectoEliminacion(id) {
+
+            // Agregar la clase "eliminado" al elemento con el ID proporcionado
+            document.getElementById(id).classList.add('eliminado');
+
+            // Retraso antes de ejecutar el bucle forEach
+            setTimeout(function () {
+                // Obtener todos los elementos que contienen la palabra "dPedid" en su ID
+                var elementos = document.querySelectorAll('[id*="dPedido"]');
+
+                // Iterar sobre cada elemento y quitar la clase "eliminado"
+                elementos.forEach(function (elemento) {
+                    elemento.classList.remove('eliminado');
+                });
+            }, 500); // Puedes ajustar el tiempo de retraso (en milisegundos) según tus necesidades
+        }
+
+        function AsignarClase(id) {
+            document.getElementById(id).classList.add('seleccionado');
+        }
+
+        function RemoverClase(id) {
+            document.getElementById(id).classList.remove('seleccionado');
+        }
+        function RemoverClaseMultiple(idParcial) {
+            var elementos = document.querySelectorAll('[id*="' + idParcial +'"]');
+
+            // Iterar sobre cada elemento y quitar la clase "eliminado"
+            elementos.forEach(function (elemento) {
+                elemento.classList.remove('seleccionado');
+            });
+        }   
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\RestauranteVirtual.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj",
+        "projectName": "RestauranteVirtual.Common",
+        "projectPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj",
+        "packagesPath": "C:\\Users\\Desktop\\.nuget\\packages\\",
+        "outputPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Desktop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Dto\\RestauranteVirtual.Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Dto\\RestauranteVirtual.Dto.csproj",
+        "projectName": "RestauranteVirtual.Dto",
+        "projectPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Dto\\RestauranteVirtual.Dto.csproj",
+        "packagesPath": "C:\\Users\\Desktop\\.nuget\\packages\\",
+        "outputPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Dto\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Desktop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj": {
+                "projectPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\RestauranteVirtual.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\RestauranteVirtual.Web.csproj",
+        "projectName": "RestauranteVirtual.Web",
+        "projectPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\RestauranteVirtual.Web.csproj",
+        "packagesPath": "C:\\Users\\Desktop\\.nuget\\packages\\",
+        "outputPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Desktop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj": {
+                "projectPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Common\\RestauranteVirtual.Common.csproj"
+              },
+              "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Dto\\RestauranteVirtual.Dto.csproj": {
+                "projectPath": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Dto\\RestauranteVirtual.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Faso.Blazor.SpinKit": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.32.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.15, 6.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

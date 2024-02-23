@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = IntranetWeb
+build_property.RootNamespace = IntranetWeb
+build_property.ProjectDir = C:\Miguel Pinto\Proyectos\IntranetAPI\IntranetWeb\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Miguel Pinto\Proyectos\IntranetAPI\IntranetWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/Busqueda/BotonFiltroAvanzado.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXNxdWVkYVxCb3RvbkZpbHRyb0F2YW56YWRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/Busqueda/Paginacion.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXNxdWVkYVxQYWdpbmFjaW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/Iconos/HeaderOrdenar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJY29ub3NcSGVhZGVyT3JkZW5hci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/MenuItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZW51SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/Validacion/CustomFormValidator.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWYWxpZGFjaW9uXEN1c3RvbUZvcm1WYWxpZGF0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/Validacion/CustomValidationMessage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWYWxpZGFjaW9uXEN1c3RvbVZhbGlkYXRpb25NZXNzYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Pages/Administracion/AlumnoCrearEditar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYWNpb25cQWx1bW5vQ3JlYXJFZGl0YXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Pages/Administracion/Alumnos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYWNpb25cQWx1bW5vcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Shared/Navbar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Shared/Sidebar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZGViYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Components/Iconos/IconoOrdenar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJY29ub3NcSWNvbm9PcmRlbmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5glmc428ar
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetWeb/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-atxm3coe51

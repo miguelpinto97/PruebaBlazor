@@ -1,0 +1,189 @@
+﻿@page "/Administracion/{TipoVista}"
+
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using RestauranteVirtual.Web.Components.Busqueda
+@*@using RestauranteVirtual.Web.Components.Controles
+@using RestauranteVirtual.Web.Components.Mensajes*@
+@using RestauranteVirtual.Web.Components.Validacion
+@using RestauranteVirtual.Web.Utils.Constants;
+@*@using RestauranteVirtual.Web.Components.Modals
+@using RestauranteVirtual.Common.Utils;
+@using RestauranteVirtual.Common.Constants*@
+@using RestauranteVirtual.Web.Components.Iconos
+
+<!-- Page header -->
+<div class="page-header page-header-light shadow">
+	<div class="page-header-content d-lg-flex">
+		<div class="d-flex">
+			<h4 class="page-title mb-0">
+				Administración de @TipoVista
+			</h4>
+
+			<a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+
+
+	</div>
+
+	<div class="page-header-content d-lg-flex border-top">
+		<div class="d-flex">
+			<div class="breadcrumb py-2">
+				<a href="index.html" class="breadcrumb-item"><i class="ph-house"></i></a>
+				<a href="#" class="breadcrumb-item">Administración</a>
+				<span class="breadcrumb-item active">Administración de @TipoVista</span>
+			</div>
+
+			<a href="#breadcrumb_elements" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+
+	</div>
+</div>
+<!-- /page header -->
+<!-- Content area -->
+<div class="content">
+	<!-- Filters -->
+
+	<div class="navbar navbar-expand-lg shadow rounded py-1 mb-3">
+		<div class="container-fluid mb-2 mt-2">
+
+			<div class="col-lg-5 col-md-5 col-sm-7 col-10">
+				<div class="form-control-feedback form-control-feedback-end flex-fill mx-2">
+					<input type="search" class="form-control" @bind="_terminoBusqueda" @bind:event="oninput" @onkeypress="@(e => FiltroGeneral(e))">
+					<div class="form-control-feedback-icon">
+						<i class="ph-magnifying-glass opacity-50"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-2 col-2">
+				<BotonFiltroAvanzado TargetCollapse="#navbar-filter"></BotonFiltroAvanzado>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-3 col-12 mt-2 mt-sm-0" style="text-align:right">
+
+
+				<div style="display:inline-block">
+
+
+					<a class="btn btn-light" href=@($"Administracion/{TipoVista}/Nuevo")>
+						<i class="ph-plus-circle me-2"></i>
+						Nuevo
+					</a>
+
+				</div>
+
+				
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Filters -->
+	<!-- Other Filter toolbar -->
+
+
+
+	<!-- /filter toolbar -->
+	<!-- /table -->
+
+
+
+
+		<div class="navbar shadow rounded py-1 mb-3">
+			<div class="table-responsive w-100">
+				<table class="table table-sm">
+					<thead>
+						<tr>
+
+
+							<th>
+								Código
+								<HeaderOrdenar Columna="Codigo" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Codigo", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+							<th>
+								Nombre
+								<HeaderOrdenar Columna="Nombre" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Nombre", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+							<th>
+								Apellido Paterno
+								<HeaderOrdenar Columna="ApellidoPaterno" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("ApellidoPaterno", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+							<th>
+								Apellido Materno
+								<HeaderOrdenar Columna="ApellidoMaterno" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("ApellidoMaterno", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+							<th>
+								Género
+								<HeaderOrdenar Columna="Genero" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Genero", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+							<th>
+								F. Nacimiento
+								<HeaderOrdenar Columna="FechaNacimiento" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("FechaNacimiento", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+
+							<th>
+								Edad
+								<HeaderOrdenar Columna="Edad" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Edad", bool.Parse(e.ToString()))'></HeaderOrdenar>
+							</th>
+							<th></th>
+
+						</tr>
+					</thead>
+					<tbody>
+
+					@if (!hayData)
+					{
+						<tr>
+							<td colspan="8" style="text-align:center;padding-top: 8px;padding-bottom: 8px;">No se han encontrado resultados</td>
+						</tr>
+					}
+					else
+					{
+						foreach (var reg in _elementosPorPagina)
+						{
+							<tr>
+
+								<td>@reg.Id</td>
+								<td>@reg.Nombre</td>
+								<td>@reg.ApellidoPaterno</td>
+								<td>@reg.ApellidoMaterno</td>
+								<td>@reg.Genero</td>
+								<td>@reg.FechaNacimiento</td>
+								<td>@reg.Edad</td>
+								<td>
+									<div class="d-inline-flex ">
+
+										<a class="text-body acciones" href=@($"Administracion/{TipoVista}/Actualizar/{reg.Id}")>
+											<i class="ph-pen"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+						}
+					}
+
+
+						
+					</tbody>
+				</table>
+			</div>
+
+		@if (hayData)
+		{
+			<Paginacion @ref="_paginacion" PaginaSeleccionada="CambiarPagina"></Paginacion>
+		}
+
+
+		</div>
+
+
+
+
+
+</div>
+<!-- /content area -->

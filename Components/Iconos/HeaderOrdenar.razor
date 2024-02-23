@@ -1,0 +1,33 @@
+﻿<a class="text-body" @onclick="RealizarAccion">
+    <span style="float:right"><i class="@claseSorting"></i></span>
+</a>
+
+
+@code {
+    [Parameter] public EventCallback Evento { get; set; }
+    [Parameter] public string Columna { get; set; }
+    [Parameter] public string ColumnaSeleccionada { get; set; }
+    private string claseSorting = "ph-list";
+    private bool ascendente = false;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Columna != ColumnaSeleccionada)
+        {
+            ascendente = false;
+            claseSorting = "ph-list";
+        }
+        else
+        {
+            claseSorting = ascendente ? "ph-sort-ascending" : "ph-sort-descending";
+        }
+        StateHasChanged();
+    }
+
+    public void RealizarAccion()
+    {
+        ascendente = !ascendente;
+        Evento.InvokeAsync(ascendente);
+        StateHasChanged();
+    }
+}

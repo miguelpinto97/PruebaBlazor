@@ -1,0 +1,82 @@
+﻿@layout PublicLayout
+@page "/Login"
+@attribute [AllowAnonymous]
+@using RestauranteVirtual.Web.Components.Mensajes
+@using RestauranteVirtual.Web.Utils.Constants;
+
+
+<section>
+	<div class="imgBx">
+		<img src="../img/Foto Entidad.png" />
+		@*<img src="../img/Foto Entidad.jpeg" />	*@
+</div>
+
+	<div class="contentBx">
+		<div class="formBx">
+			<EditForm Model="_loginModel" OnValidSubmit="HandleLogin">
+			<PanelMensaje Mensaje="@_mensajeError" TipoPanel="@UserInterfaceConstants.TipoPanel.ERROR"></PanelMensaje>
+			<div class="mb-3" style="text-align:center">
+
+				<img src="../img/Logo y Nombre.png" width="150" height="50" />
+				@*<img src="../img/Logo Entidad Santillana.png" width="150" height="170" />	*@	
+
+</div>
+
+			<br />
+
+			<div class="mb-3" style="text-align:center; font-size:medium">
+				<label class="form-label" style="color:black; font-weight:700">&nbsp; INGRESAR AL SISTEMA</label>
+
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label" style="color:black; font-weight:700">Usuario</label>
+				<div class="form-control-feedback form-control-feedback-start">
+					<InputText Class="form-control" @bind-Value="_loginModel.Username" />
+					<div class="form-control-feedback-icon">
+						<i class="ph-user-circle text-muted"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label" style="color:black; font-weight:700">Contraseña</label>
+				<div class="form-control-feedback form-control-feedback-start">
+					<InputText Class="form-control" @bind-Value="_loginModel.Password" type="password" />
+					<div class="form-control-feedback-icon">
+						<i class="ph-lock text-muted"></i>
+
+					</div>
+				</div>
+
+				&nbsp;
+
+			</div>
+
+			<div class="mb-3" style="text-align:center">
+
+				<a href="/RecuperarContrasena" style="color:black">¿Olvidaste tu contraseña?</a>
+
+
+				&nbsp;
+
+				<button type="submit" class="btn btn-outline-warning">Iniciar Sesión</button>
+
+
+			</div>
+
+
+			</EditForm>
+
+		</div>
+
+	</div>
+</section>
+
+
+
+
+
+
+
+

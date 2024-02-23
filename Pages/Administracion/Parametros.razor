@@ -1,0 +1,346 @@
+﻿@page "/Administracion/Parametros"
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using RestauranteVirtual.Common.Utils;
+@using RestauranteVirtual.Web.Components.Iconos
+@using RestauranteVirtual.Web.Components.Busqueda
+@using RestauranteVirtual.Web.Components.Controles
+@using RestauranteVirtual.Web.Components.Mensajes
+@using RestauranteVirtual.Web.Components.Validacion
+@using RestauranteVirtual.Web.Utils.Constants;
+@using RestauranteVirtual.Web.Components.Modals
+
+
+
+<!-- Page header -->
+<div class="page-header page-header-light shadow">
+	<div class="page-header-content d-lg-flex">
+		<div class="d-flex">
+			<h4 class="page-title mb-0">
+				Administración de Parámetros Generales
+			</h4>
+
+			<a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="page-header-content d-lg-flex border-top">
+		<div class="d-flex">
+			<div class="breadcrumb py-2">
+				<a href="index.html" class="breadcrumb-item"><i class="ph-house"></i></a>
+				<a href="#" class="breadcrumb-item">Administración</a>
+				<span class="breadcrumb-item active">Parámetros Generales</span>
+			</div>
+
+			<a href="#breadcrumb_elements" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+
+	</div>
+</div>
+<!-- /page header -->
+<!-- Content area -->
+<div class="content">
+	<!-- Filters -->
+	<div class="navbar navbar-expand-lg shadow rounded py-1 mb-3">
+		<div class="container-fluid mb-2 mt-2">
+			<div class="col-lg-3">
+				<select class="form-control select" id="ddlParametros">
+					@foreach (var parametro in _baseInfo.Parametros)
+					{
+						<option value="@parametro.Key">@parametro.Value</option>
+					}
+				</select>
+			</div>
+
+			<div class="col-lg-3">
+				<div class="form-control-feedback form-control-feedback-end flex-fill mx-2">
+					<input type="search" class="form-control" @bind="_terminoBusqueda" @bind:event="oninput" @onkeypress="FiltroGeneral">
+					<div class="form-control-feedback-icon">
+						<i class="ph-magnifying-glass opacity-50"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2" style="padding-left: 15px">
+				<BotonFiltroAvanzado TargetCollapse="#navbar-filter"></BotonFiltroAvanzado>
+			</div>
+
+			<div class="col-lg-4" style="text-align:right">
+				@if (_parametroDetalle.PuedeAgregar)
+				{
+					<div style="display:inline-block">
+						<button type="button" class="btn btn-light" @onclick="GenerarNuevo">
+							<i class="ph-plus-circle me-2"></i>
+							Nuevo
+						</button>
+					</div>
+				}
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Filters -->
+	<!-- Other Filter toolbar -->
+	<div class="navbar navbar-expand-lg shadow rounded py-1 mb-3 collapse" id="navbar-filter">
+		<div class="container-fluid">
+			<div class="order-2 order-lg-1">
+				<ul class="navbar-nav flex-wrap mt-2 mt-lg-0">
+					<li class="nav-item">
+						<span class="navbar-text d-none d-lg-inline-flex align-items-lg=center me-3">
+							<i class="ph-funnel me-2" data-toggle="tooltip" title="Filtros Avanzados"></i>
+						</span>
+						<div class="d-lg-inline-flex">
+							<InputMultiSelect Placeholder="Estado" Opciones="_baseInfo.Estados" OnSelect="Filtrar"
+											  Id="ddlEstado" @bind-ValoresSeleccionados="_filtroEstado"></InputMultiSelect>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<!-- /filter toolbar -->
+	<!-- /table -->
+	@if (_elementosPorPagina == null)
+	{
+		<p><em>Loading...</em></p>
+	}
+	else
+	{
+		<EditForm EditContext="_editContext">
+			<CustomFormValidator @ref="_customFormValidator"></CustomFormValidator>
+			<PanelMensaje Mensaje="@_mensajeError" TipoPanel="@UserInterfaceConstants.TipoPanel.ERROR"></PanelMensaje>
+			<div class="navbar shadow rounded py-1 mb-3">
+				<div class="table-responsive w-100">
+
+					<table class="table table-sm dataTable">
+						<thead>
+							<tr>
+								<th>
+									Código
+									<HeaderOrdenar Columna="Id" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("Id", bool.Parse(e.ToString()))'></HeaderOrdenar>
+
+								</th>
+								<th>
+									Descripción
+									<HeaderOrdenar Columna="Descripcion" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("Descripcion", bool.Parse(e.ToString()))'></HeaderOrdenar>
+
+								</th>
+								<th>
+									Valor
+									<HeaderOrdenar Columna="Valor" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("Valor", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+
+								@if (_parametroDetalle.ParametroPadreId != null)
+								{
+									<th>
+										Parámetro Padre
+										<HeaderOrdenar Columna="ValorPadre" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("ValorPadre", bool.Parse(e.ToString()))'></HeaderOrdenar>
+									</th>
+								}
+								<th>
+									Orden
+									<HeaderOrdenar Columna="Orden" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("Orden", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+									Estado
+									<HeaderOrdenar Columna="Estado" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("Estado", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+									Actualizado por
+									<HeaderOrdenar Columna="UsuarioModifica" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("UsuarioModifica", bool.Parse(e.ToString()))'></HeaderOrdenar>
+
+								</th>
+								<th>
+									Última actualización
+									<HeaderOrdenar Columna="FechaModifica" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenamiento("FechaModifica", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							@if (esNuevo)
+							{
+								<tr>
+									<td>
+									</td>
+									<td>
+										<InputText class="form-control" @bind-Value="_parametroModel.Descripcion"></InputText>
+										<CustomValidationMessage For="@(() => _parametroModel.Descripcion)" Class="invalid-feedback" />
+									</td>
+									<td>
+										<InputText class="form-control" @bind-Value="_parametroModel.Valor"></InputText>
+										<CustomValidationMessage For="@(() => _parametroModel.Valor)" Class="invalid-feedback" />
+									</td>
+									@if (_parametroDetalle.ParametroPadreId != null)
+									{
+										<td>
+											<InputSelect class="form-select" @bind-Value="_parametroModel.ValorPadreId">
+												<option value="">Seleccione</option>
+												@foreach (var estado in _valoresPadre)
+												{
+													<option value="@estado.Key">@estado.Value</option>
+												}
+											</InputSelect>
+											<CustomValidationMessage For="@(() => _parametroModel.ValorPadreId)" Class="invalid-feedback" />
+										</td>
+									}
+									<td>
+										<InputNumber class="form-control" @bind-Value="_parametroModel.Orden"></InputNumber>
+										<CustomValidationMessage For="@(() => _parametroModel.Orden)" Class="invalid-feedback" />
+									</td>
+									<td>
+										<InputSelect class="form-select" @bind-Value="_parametroModel.EstadoId">
+											<option value="">Seleccione</option>
+											@foreach (var estado in _baseInfo.Estados)
+											{
+												<option value="@estado.Key">@estado.Value</option>
+											}
+										</InputSelect>
+										<CustomValidationMessage For="@(() => _parametroModel.EstadoId)" Class="invalid-feedback" />
+									</td>
+									<td>
+									</td>
+									<td>
+									</td>
+									<td>
+										<div class="d-inline-flex ">
+											<a class="text-body acciones" @onclick=GuardarCambios>
+												<i class="ph-floppy-disk"></i>
+											</a>
+											<a class="text-body mx-2 acciones" @onclick=Cancelar>
+												<i class="ph-x"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							}
+
+							@if (_elementosFiltrados.Count == 0)
+							{
+							<td colspan="7" style="text-align:center;padding-top: 8px;padding-bottom: 8px;">No se han encontrado resultados</td>
+							}
+							@foreach (var valor in _elementosPorPagina)
+							{
+							<tr>
+									@if (IdEdicion == valor.Id)
+									{
+									<td>
+											@valor.Id
+									</td>
+									<td>
+										<InputText class="form-control" @bind-Value="_parametroModel.Descripcion"></InputText>
+										<CustomValidationMessage For="@(() => _parametroModel.Descripcion)" Class="invalid-feedback" />
+									</td>
+									<td>
+										<InputText class="form-control" @bind-Value="_parametroModel.Valor"></InputText>
+										<CustomValidationMessage For="@(() => _parametroModel.Valor)" Class="invalid-feedback" />
+									</td>
+										@if (_parametroDetalle.ParametroPadreId != null)
+										{
+											<td>
+												<InputSelect class="form-select" @bind-Value="_parametroModel.ValorPadreId">
+													<option value="">Seleccione</option>
+														@foreach (var estado in _valoresPadre)
+														{
+															<option value="@estado.Key">@estado.Value</option>
+														}
+												</InputSelect>
+												<CustomValidationMessage For="@(() => _parametroModel.ValorPadreId)" Class="invalid-feedback" />
+											</td>
+											
+										}												
+									<td>
+										<InputNumber class="form-control" @bind-Value="_parametroModel.Orden"></InputNumber>
+										<CustomValidationMessage For="@(() => _parametroModel.Orden)" Class="invalid-feedback" />
+									</td>
+									<td>
+										<InputSelect class="form-select" @bind-Value="_parametroModel.EstadoId">
+											<option value="">Seleccione</option>
+												@foreach (var estado in _baseInfo.Estados)
+												{
+												<option value="@estado.Key">@estado.Value</option>
+												}
+										</InputSelect>
+										<CustomValidationMessage For="@(() => _parametroModel.EstadoId)" Class="invalid-feedback" />
+									</td>
+									<td>
+											@valor.UsuarioModifica
+									</td>
+									<td>
+											@valor.FechaModifica.ToFechaHoraLocal().ToStringFechaHora()
+									</td>
+									<td>
+										<div class="d-inline-flex ">
+
+											<a class="text-body acciones" @onclick=GuardarCambios>
+												<i class="ph-floppy-disk"></i>
+											</a>
+											<a class="text-body mx-2 acciones" @onclick=Cancelar>
+												<i class="ph-x"></i>
+											</a>
+										</div>
+									</td>
+									}
+									else
+									{
+									<td>@valor.Id</td>
+									<td>@valor.Descripcion</td>
+									<td>@valor.Valor</td>
+										@if (_parametroDetalle.ParametroPadreId != null)
+										{
+										<td>@valor.ValorPadre</td>
+										}
+									<td>@valor.Orden</td>
+									<td>@valor.Estado</td>
+									<td>@valor.UsuarioModifica</td>
+									<td>@valor.FechaModifica.ToFechaHoraLocal().ToStringFechaHora()</td>
+									<td>
+										<div class="d-inline-flex ">
+												@if (_parametroDetalle.PuedeModificar)
+												{
+												<a class="text-body acciones" title="Modificar" @onclick="e=>ActivarEdicion(valor.Id)">
+													<i class="ph-pen"></i>
+												</a>
+												}
+
+												@if (_parametroDetalle.PuedeEliminar)
+												{
+												<a class="text-body mx-2 acciones" title="Eliminar"
+												   data-bs-toggle="modal"
+												   data-bs-target="#modalConfirmacion"
+												   @onclick="e=>ConfirmarEliminacion(valor.Id)">
+													<i class="ph-trash"></i>
+												</a>
+												}
+
+										</div>
+									</td>
+									}
+							</tr>
+							}
+						</tbody>
+					</table>
+
+				</div>
+				<Paginacion @ref="_paginacion" PaginaSeleccionada="CambiarPagina"></Paginacion>
+
+			</div>
+		</EditForm>
+	}
+
+	<ModalConfirmacion ModalId="modalConfirmacion" Accion="@_accion" Metodo="Eliminar" />
+</div>
+<!-- /content area -->
+

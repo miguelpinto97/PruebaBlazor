@@ -1,0 +1,18 @@
+﻿@using RestauranteVirtual.Web.Models.General;
+<li class="" data-nodoid="@Nodo.Id" data-tipo="@Nodo.Tipo">
+	@Nodo.Nombre
+	@if(Nodo.Hijos.Count > 0)
+	{
+		<ul>
+			@foreach(var hijo in Nodo.Hijos)
+			{
+				<TreeNodeCheckbox Nodo="hijo"></TreeNodeCheckbox>
+			}
+		</ul>		
+	}
+</li>
+
+@code {
+	[Parameter]
+	public TreeNodeModel Nodo { get; set; }
+}

@@ -1,0 +1,45 @@
+﻿@using RestauranteVirtual.Web.Models.Administracion;
+
+@if(string.IsNullOrEmpty(Opcion.Url))
+{
+    <li class="nav-item nav-item-submenu">
+        <a href="#" class="nav-link">
+            @if (!string.IsNullOrEmpty(Opcion.Icono))
+            {
+                <i class="@Opcion.Icono"></i>                
+            }
+            <span>@Opcion.Nombre</span>
+        </a>
+
+        @if (Opcion.Opciones != null && Opcion.Opciones.Count > 0)
+        {
+            <ul class="nav-group-sub collapse">
+                @foreach (var subMenu in Opcion.Opciones)
+                {
+                    <MenuItem Opcion="subMenu"></MenuItem>
+                }
+            </ul>
+        }
+
+    </li>
+}
+else
+{
+ 
+    
+    <li class="nav-item">
+        <a href="@Opcion.Url" class="nav-link sidebar-mobile-main-toggle">
+            @if (!string.IsNullOrEmpty(Opcion.Icono))
+            {
+                <i class="@Opcion.Icono"></i>
+            }
+            <span>@Opcion.Nombre</span>
+        </a>
+        </li>
+}
+
+
+
+@code {
+    [Parameter] public MenuOpcionModel Opcion { get; set; } = new();
+}

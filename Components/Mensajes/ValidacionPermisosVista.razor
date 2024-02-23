@@ -1,0 +1,21 @@
+﻿@*@using RestauranteVirtual.Web.Services.Authentication;
+
+
+@code {
+
+    [Parameter] public string Permisos { get; set; } = "";
+    [Inject] NavigationManager NavigationManager { get; set; }
+    [Inject] IAuthService _authService { get; set; }
+    [Inject] CustomAuthenticationStateProvider CustomAuthenticationStateProvider { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var userState = await CustomAuthenticationStateProvider.GetAuthenticationStateAsync();
+        if (!userState.User.Identity.IsAuthenticated) return;
+
+        var tienePermiso = await _authService.ValidarPermisos(Permisos.Split(','));
+        if (!tienePermiso)
+            NavigationManager.NavigateTo("/401");
+    }
+}
+*@

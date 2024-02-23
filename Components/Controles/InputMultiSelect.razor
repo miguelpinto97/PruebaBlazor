@@ -1,0 +1,207 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Components
+@using Microsoft.JSInterop
+@using RestauranteVirtual.Web.Services.Javascript;
+
+@if (Disabled)
+{
+    <div class="text-truncate" title="@_textoSeleccionados">
+        @_textoSeleccionados
+    </div>
+}
+else
+{
+    <span class="multiselect-native-select">
+        <div class="dropdown" style="width: 100%;" id="dropdown-@Id">
+            <button type="button" class="multiselect dropdown-toggle btn" data-bs-target="#dropdown-@Id" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    style="margin-bottom: 5px; width: 100%; overflow: hidden; text-overflow: ellipsis;"
+                    aria-expanded="false" title="@Placeholder">
+                <span class="multiselect-selected-text">@GetLabel()</span>
+            </button>
+            <div class="multiselect-container dropdown-menu">
+                <div class="dropdown-item multiselect-all" title=" Seleccionar Todos" @onclick="HandleSelectionAll"
+                 @onclick:stopPropagation="true" @onclick:preventDefault="true">
+                    <label class="form-check flex-1 mb-0">
+                        @if (_seleccionadosTodos)
+                        {
+                            <input class="form-check-input" type="checkbox" value="multiselect-all" checked="checked">
+                        }
+                        else
+                        {
+                            <input class="form-check-input" type="checkbox" value="multiselect-all">
+                        }
+                        <span class="form-check-label w-100 font-weight-bold"> Seleccionar Todos</span>
+                    </label>
+                </div>
+                @if (_opciones != null && _opciones.Any())
+                {
+                    @foreach (var option in _opciones)
+                    {
+                        <div class="multiselect-item dropdown-item" title="@option.Value"
+                 @onclick:stopPropagation="true" @onclick:preventDefault="true"
+                 @onclick="() => HandleSelection(option.Key)">
+                            <label class="form-check flex-1 mb-0">
+                                @if (ValoresSeleccionados.Contains(option.Key))
+                                {
+                                    <input class="form-check-input" type="checkbox" value="@option.Key" checked="checked">
+                                }
+                                else
+                                {
+                                    <input class="form-check-input" type="checkbox" value="@option.Key">
+                                }
+
+                                <span class="form-check-label w-100">@option.Value</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </span>
+}
+
+
+@code {
+
+    [Inject] JavascriptService JavascriptService { get; set; }
+    [Parameter] public string Id { get; set; } = "";
+    [Parameter] public string Placeholder { get; set; } = "";
+    [Parameter] public bool Disabled { get; set; } = false;
+    [Parameter] public IDictionary<string, string>? Opciones { 
+        get
+        {
+            return _opciones;
+        }
+        set
+        {
+            if (value == null) return;
+
+            if(UltimasOpciones == null)
+            {
+                UltimasOpciones = value;
+            }
+            else if(SonDiferentes(value, UltimasOpciones))
+            {
+                ValoresSeleccionados.Clear();
+                UltimasOpciones = value;
+                _seleccionadosTodos = false;
+            }
+            _opciones = value;
+        } 
+    }
+    [Parameter] public EventCallback OnSelect { get; set; }
+    [Parameter] public List<string> ValoresSeleccionados { get; set; } = new();
+    [Parameter]
+    public EventCallback<List<string>> ValoresSeleccionadosChanged { get; set; }
+    public IDictionary<string, string> UltimasOpciones { get; set; }
+
+    private string selectedValue;
+    private bool _seleccionadosTodos;
+    private bool _configuradoEventPropagation;
+    private ElementReference suggestionsContainer;
+    private IDictionary<string, string> _opciones = new Dictionary<string, string>();
+    private string _textoSeleccionados
+    {
+        get
+        {
+            string texto = string.Empty;
+            var listaDescripciones = Opciones
+                                        .Where(x => ValoresSeleccionados.Contains(x.Key.ToString()))
+                                        .Select(x => x.Value.ToString())
+                                        .ToList();
+            return string.Join(", ", listaDescripciones);
+        }
+    }
+
+    private string SelectedValue
+    {
+        get => selectedValue;
+        set
+        {
+            selectedValue = value;
+        }
+    }   
+
+    private async void HandleSelectionAll()
+    {
+        if (_seleccionadosTodos)
+        {
+            ValoresSeleccionados.Clear();
+        }
+        else
+        {
+            ValoresSeleccionados = Opciones.Keys.ToList();
+        }
+        _seleccionadosTodos = !_seleccionadosTodos;
+        await ValoresSeleccionadosChanged.InvokeAsync(ValoresSeleccionados);
+        if (OnSelect.HasDelegate)
+        {
+            await OnSelect.InvokeAsync();
+        }
+
+        StateHasChanged();
+    }
+
+    private async void HandleSelection(string selection)
+    {
+        if (ValoresSeleccionados.Contains(selection))
+            ValoresSeleccionados.Remove(selection);
+        else
+            ValoresSeleccionados.Add(selection);
+
+        if (ValoresSeleccionados.Count == 0)
+            _seleccionadosTodos = false;
+        if (ValoresSeleccionados.Count == _opciones.Count)
+            _seleccionadosTodos = true;
+
+        await ValoresSeleccionadosChanged.InvokeAsync(ValoresSeleccionados);
+        if (OnSelect.HasDelegate)
+        {
+            await OnSelect.InvokeAsync();
+        }
+        StateHasChanged();
+    }
+
+    private string GetLabel()
+    {
+        if (_opciones.Count == 0) return string.Empty;
+
+        if (ValoresSeleccionados.Count == 1)
+            return _opciones[ValoresSeleccionados[0]].ToString();
+        else if (ValoresSeleccionados.Count == 2)
+        {
+            var label = _opciones[ValoresSeleccionados[0]].ToString();
+            label += ", ";
+            label += _opciones[ValoresSeleccionados[1]].ToString();
+            return label;
+        }
+        else if (ValoresSeleccionados.Count > 2)
+        {
+            return $"{ValoresSeleccionados.Count} seleccionados";
+        }
+
+        return Placeholder;
+    }
+
+    public bool SonDiferentes(IDictionary<string, string> diccionario1, IDictionary<string, string> diccionario2)
+    {
+        if (diccionario1.Count != diccionario2.Count)
+        {
+            return true; // Los diccionarios tienen diferentes cantidades de elementos
+        }
+
+        foreach (var kvp in diccionario1)
+        {
+            if (!diccionario2.ContainsKey(kvp.Key) || diccionario2[kvp.Key] != kvp.Value)
+            {
+                return true; // Se encontró una clave que no está presente en el segundo diccionario o su valor es diferente
+            }
+        }
+
+        return false; // Los diccionarios son iguales
+    }
+
+}
+

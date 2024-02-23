@@ -1,0 +1,123 @@
+﻿@using RestauranteVirtual.Dto.Notificaciones
+@using RestauranteVirtual.Web.Services.Javascript
+
+<!-- Main navbar -->
+<div class="navbar navbar-dark navbar-expand-lg navbar-static border-bottom border-bottom-white border-opacity-10" style="width:100%;position:absolute">
+	<div class="container-fluid">
+		
+		<div class="d-flex d-lg-none me-2">
+			<button id="btnOpcionesMenu"  type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
+				<i class="ph-list"></i>
+			</button>
+		</div>
+		<div class="navbar-brand flex-1 flex-lg-0" style="padding-top:unset !important; padding-bottom:unset !important">
+			<a href="index.html" class="d-inline-flex align-items-center">
+				<img src="../img/logo Entidad santillana.png" alt="" style="height:35px" />
+			</a>
+			<span class="d-none d-lg-inline-block mx-lg-2" style="font-size:15px">
+				Salchipapa Andina
+			</span>
+		</div>
+
+		@if (Notificaciones != null)
+		{
+			if (Notificaciones.Any())
+			{
+				<ul class="nav flex-row" style="margin-right:auto">
+					<li class="nav-item nav-item-dropdown-lg dropdown ms-lg-2">
+						<a id="dpNotificaciones" href="#" class="navbar-nav-link navbar-nav-link-icon rounded-pill" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+							<i class="ph-chats"></i>
+							<span class="badge bg-yellow text-black position-absolute top-0 end-0 translate-middle-top zindex-1 rounded-pill mt-1 me-1">
+								@(
+									Notificaciones == null ? 0 : Notificaciones.Count(x => !x.Leido)
+									)
+							</span>
+						</a>
+
+						<div class="dropdown-menu wmin-lg-400 p-0">
+							<div class="d-flex align-items-center p-3">
+								<h6 class="mb-0">Notificaciones</h6>
+								<div class="ms-auto">
+									@*							<a href="#" class="text-body">
+							<i class="ph-plus-circle"></i>
+							</a>*@
+									<a href="#" class="collapsed text-body ms-2" @onclick='e=>JavascriptService.GenerarClickEnElemento("dpNotificaciones")'>
+										<i class="ph-x"></i>
+									</a>
+								</div>
+							</div>
+
+
+							<div class="dropdown-menu-scrollable pb-2">
+
+
+								@foreach (var notificacion in Notificaciones)
+								{
+									<a href="#" class="dropdown-item align-items-start text-wrap py-2">
+										<div class="status-indicator-container me-3">
+											<img src="../../../assets/images/demo/users/face10.jpg" class="w-40px h-40px rounded-pill" alt="">
+											<span class="status-indicator @(notificacion.Leido ?"bg-success": "bg-warning")"></span>
+										</div>
+
+										<div class="flex-1">
+											<span class="fw-semibold">@notificacion.NombreUsuarioCreador</span>
+											<span class="text-muted float-end fs-sm">@notificacion.DiferenciaTiempo</span>
+											<div class="text-muted">@notificacion.TituloCorto</div>
+										</div>
+									</a>
+								}
+								
+
+
+							</div>
+
+							<div class="d-flex border-top py-2 px-3">
+								@*						<a href="#" class="text-body">
+						<i class="ph-checks me-1"></i>
+						Dismiss all
+						</a>*@
+								<a href="#" class="text-body ms-auto">
+									Ver Todos
+									<i class="ph-arrow-circle-right ms-1"></i>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			}
+		}
+
+		<ul class="nav flex-row justify-content-end order-1 order-lg-2">
+			
+			<li class="nav-item nav-item-dropdown-lg dropdown ms-lg-2">
+				<a href="#" class="navbar-nav-link align-items-center rounded-pill p-1" data-bs-toggle="dropdown">
+					<div class="status-indicator-container">
+						<i class="ph-user-circle w-50px h-50px" alt=""></i>
+					</div>
+					<span class="d-none d-lg-inline-block mx-lg-2">@NombreUsuario</span>
+				</a>
+@*				<div class="dropdown-menu dropdown-menu-end">
+					<a href="/Logout" class="dropdown-item">
+						<i class="ph-sign-out me-2"></i>
+						Logout
+					</a>
+				</div>*@
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /main navbar -->
+
+@code{
+	[Parameter]
+	public string NombreUsuario { get; set; }
+
+	[Parameter]
+	public List<NotificacionDto> Notificaciones { get; set; } = new List<NotificacionDto>();
+
+	[Inject]
+	public JavascriptService JavascriptService { get; set; }
+
+	
+}

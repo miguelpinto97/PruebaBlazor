@@ -1,0 +1,227 @@
+﻿@page "/"
+@using RestauranteVirtual.Web.Services.Javascript
+@using RestauranteVirtual.Common.Constants
+
+<PageTitle>Home</PageTitle>
+
+<div style="padding:10px">
+
+    @if (Categorias != null)
+    {
+        <div class="d-flex justify-content-around mb-2">
+
+            <span class="categoria seleccionado" id="@ParametrosConstants.ParametrosId.CATEGORIAS_ITEMS" @onclick='e=>SeleccionarCategoria(ParametrosConstants.ParametrosId.CATEGORIAS_ITEMS)'>Todos</span>
+
+            @foreach (var categoria in Categorias.OrderBy(x=>x.Key))
+            {
+                <span class="categoria" id="@categoria.Key" @onclick='e=>SeleccionarCategoria(categoria.Key)'>@categoria.Value</span>
+            }
+        </div>
+
+
+    }
+
+    @if (ItemsFiltrados != null)
+    {
+        <div class="container">
+            <div class="row">
+                @foreach (var item in ItemsFiltrados.Where(x => x.TipoId == ParametrosConstants.Tipos_Items.PRODUCTOS))
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-6" data-bs-toggle="modal" data-bs-target="#modalProductoPedido" @onclick="e=>ArmarPedido(item)">
+                        <div class="product-card">
+                            <img src=@item.RutaImg alt="Product Image">
+                            <div class="product-info">
+                                <h2 class="product-title">@item.Nombre</h2>
+                                <p class="product-price">S/ @item.Precio</p>
+                                <p class="product-description">@item.Descripcion</p>
+                                <button class="btn btn-buy" >Ordenar Ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+
+        @if(ItemSeleccionado != null)
+        {
+            <!-- Modal -->
+            <!-- Centered modal -->
+            <div id="modalProductoPedido" class="modal fade" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Agregar Producto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body" style="overflow-y: auto;height: calc(100vh - 250px);">
+                            <div class="product-card" style="width:100%;margin:auto;display:flex">
+                                <img src=@ItemSeleccionado.RutaImg alt="Product Image" style="width:50%">
+                                <div class="product-info">
+                                    <h2 class="product-title">@ItemSeleccionado.Nombre</h2>
+                                    <p class="product-price">S/ @ItemSeleccionado.Precio</p>
+                                    <p class="product-description">@ItemSeleccionado.Descripcion</p>
+                                </div>
+                            </div>
+
+                            <h5 style="margin-top: 10px;">Cremas (Máximo: @ItemSeleccionado.MaximoCremas)</h5>
+                            <div class="product-card" style="padding:10px">
+                                @foreach (var crema in Cremas)
+                                {
+
+                                    <div class="number-input-container">
+                                        <button class="number-input-button" @onclick="e=>{if(crema.Cantidad>0) crema.Cantidad--;StateHasChanged();}">-</button>
+
+                                        <input class="number-input" type="number" min="0" max="999" @bind=crema.Cantidad />
+
+                                        <button class="number-input-button" @onclick="e=>{if(Cremas.Sum(x=>x.Cantidad)<ItemSeleccionado.MaximoCremas) crema.Cantidad++;StateHasChanged();}">+</button>
+                                        <span class="number-input-name">@Items.FirstOrDefault(x=>x.Id == crema.CremaId).Nombre</span>
+                                    </div>
+                                }
+                            </div>
+                            
+                            <h5 style="margin-top: 10px;">Adicionales</h5>
+                            <div class="product-card" style="padding:10px">
+                                @foreach (var extra in Extras)
+                                {
+                                    <div class="number-input-container">
+                                        <button class="number-input-button" @onclick="e=>{if(extra.Cantidad>0) extra.Cantidad--;StateHasChanged();}">-</button>
+                                        <input class="number-input" type="number" min="0" max="999" @bind=extra.Cantidad />
+                                        <button class="number-input-button" @onclick="e=>{if(Extras.Sum(x=>x.Cantidad)<10) extra.Cantidad++;StateHasChanged();}">+</button>
+                                        <span class="number-input-name">@Items.FirstOrDefault(x=>x.Id == extra.ExtraId).Nombre</span>
+                                        <span class="product-price">S/ @Items.FirstOrDefault(x=>x.Id == extra.ExtraId).Precio</span>
+                                    </div>
+                                }
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-buy" @onclick=AgregarProducto>Agregar S/ @ObtenerSubtotal()</button>
+                            @if (ProductosPedido.Any())
+                            {
+                                <button class="btn btn-buy btn-complete" @onclick=AbrirCompletarPedido>Revisar y Confirmar Pedido</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /centered modal -->
+ 
+        }
+
+        @if (ProductosPedido.Any())
+        {
+            <!-- Modal -->
+            <!-- Centered modal -->
+            <div id="modalPedido" class="modal fade" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Resumen Pedido</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body" style="overflow-y: auto;height: calc(100vh - 210px);">
+                            @foreach(var producto in ProductosPedido)
+                            {
+                                <div id="@("dPedido"+producto.IdTemporal)">
+
+                                    <div class="product-card" style="width:100%;margin:auto;display:flex">
+                                        <img src=@producto.RutaImg alt="Product Image" style="width:30%">
+                                        <div class="product-info" style="width:70%">
+                                            <div class="d-flex">
+                                                <h2 class="product-title">@producto.ProductoNombre</h2>
+                                                <i class="ph ph-trash" style="margin-left:auto" @onclick="e=>EliminarItemPedido(producto)"></i>
+                                            </div>
+                                            <p class="product-price">S/ @producto.PrecioProducto</p>
+                                            <p class="product-description">@Items.FirstOrDefault(x=>x.Id == producto.ProductoId).Descripcion</p>
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;    justify-content: space-around;">
+                                        <div class="col-6 p-1">
+                                            <h5 style="margin-top: 10px;">Cremas:</h5>
+                                            <div class="product-card" style="padding:10px">
+                                                @if (producto.Cremas.Any())
+                                                {
+                                                    @foreach (var crema in producto.Cremas)
+                                                    {
+
+                                                        <div class="number-input-container">
+                                                            <span class="number-input-name">@Items.FirstOrDefault(x=>x.Id == crema.CremaId).Nombre (@crema.Cantidad)</span>
+                                                        </div>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <div class="number-input-container">
+                                                        <span class="number-input-name">Ninguna</span>
+                                                    </div>
+                                                }
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-1">
+                                            <h5 style="margin-top: 10px;">Adicionales:</h5>
+                                            <div class="product-card" style="padding:10px">
+                                                @if (producto.Extras.Any())
+                                                {
+                                                    @foreach (var extra in producto.Extras)
+                                                    {
+
+                                                        <div class="number-input-container">
+                                                            <span class="number-input-name">@Items.FirstOrDefault(x=>x.Id == extra.ExtraId).Nombre (@extra.Cantidad)</span>
+                                                        </div>
+                                                    }
+                                                    <div class="number-input-container">
+                                                        <span class="number-input-name" style="font-weight:400">Extras: S/ @producto.Extras.Sum(x=> x.Precio * x.Cantidad)</span>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="number-input-container">
+                                                        <span class="number-input-name">Ninguno</span>
+                                                    </div>
+                                                }
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-card" style="padding:10px">
+                                        <h6 style="margin-bottom:0px !important;color: #117528">Subtotal: <span>S/ @producto.SubTotal</span></h6>
+                                    </div>
+
+                                </div>
+
+
+
+                            }
+                        </div>
+                        <div class="modal-footer">
+                            @if (ProductosPedido.Any())
+                            {
+                                <button class="btn btn-buy btn-complete" @onclick=CompletarPedido>Completar Pedido S/ @ProductosPedido.Sum(x=>x.SubTotal)</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /centered modal -->
+        }
+
+    }
+
+
+
+@*    <SurveyPrompt Title="How is Blazor working for you?" />
+*@</div>
+
+
+@if (ProductosPedido.Any())
+{
+    <button class="btn btn-buy btn-complete floating-button" @onclick=AbrirCompletarPedido>Completar Pedido S/ @ProductosPedido.Sum(x=>x.SubTotal)</button>
+}

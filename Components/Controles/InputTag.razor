@@ -1,0 +1,77 @@
+﻿@using RestauranteVirtual.Web.Services.Javascript;
+@using RestauranteVirtual.Common.Utils;
+		
+<div class="row">
+    @if (!Disabled)
+    {
+        <div class="col-sm-2">
+            <input type="@Tipo" id="@Id" class="form-control" @bind="_inputText" @bind:event="oninput" @onkeypress="OnKeyPress" />
+            <div class="form-text bg-light border border-top-0 rounded-bottom px-2 mt-0">Ingrese el monto y presione enter</div>
+        </div>
+    }
+   
+
+
+    
+    <div class="col-sm-10">
+        @foreach (var valor in Valores)
+        {
+            <button type="button" class="btn btn-light btn-labeled btn-labeled-end me-2 mb-2">
+                @if (!Disabled)
+                {
+                    <span class="btn-labeled-icon bg-black bg-opacity-20" @onclick="e=>Eliminar(valor)">
+                        <i class="ph-x-circle"></i>
+                    </span>
+                }               
+                @valor.FormatoDecimal()
+            </button>
+        }
+    </div>																													
+</div>
+
+@code {
+    [Inject] JavascriptService JavascriptService { get; set; }
+
+    [Parameter]
+    public List<string> Valores { get; set; }
+    [Parameter]
+    public string Tipo { get; set; } = "text";
+    [Parameter]
+    public string Id { get; set; }
+    [Parameter] 
+    public bool Disabled { get; set; } = false;
+    private string _inputText { get; set; }
+
+    [Parameter]
+    public EventCallback<List<string>> ValoresChanged { get; set; }
+
+    protected override async void OnInitialized()
+    {
+        Valores = new List<string>();
+    }
+
+    public async Task OnKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key != "Enter") return;
+        if(Valores.Contains(_inputText))
+        {
+            await JavascriptService.MostrarMensajeErrorPersonalizado("El valor ya existe");
+            return;
+        }
+        Valores.Add(_inputText);
+        await ValoresChanged.InvokeAsync(Valores);
+        _inputText = string.Empty;
+    }
+
+    public async Task Eliminar(string valor)
+    {
+        if (!Valores.Contains(valor))
+        {
+            await JavascriptService.MostrarMensajeErrorPersonalizado("El valor no existe");
+            return;
+        }
+        Valores.Remove(valor);
+        await ValoresChanged.InvokeAsync(Valores);
+    }
+
+}

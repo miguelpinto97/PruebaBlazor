@@ -1,0 +1,79 @@
+﻿@using RestauranteVirtual.Web.Components;
+@using RestauranteVirtual.Web.Models.Administracion;
+    <!-- Main sidebar -->
+<div id="divOpcionesMenu" class="sidebar sidebar-dark sidebar-main sidebar-expand-lg sidebar-main-resized">
+
+    <!-- Sidebar content -->
+    <div class="sidebar-content">
+
+        <!-- Sidebar header -->
+        <div class="sidebar-section">
+            <div class="sidebar-section-body d-flex justify-content-center">
+                <h5 class="sidebar-resize-hide flex-grow-1 my-auto">Navegación</h5>
+
+                <div>
+                    <button id="btnOpcionesMenu" type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-control sidebar-main-resize d-none d-lg-inline-flex">
+                        <i class="ph-arrows-left-right"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-mobile-main-toggle d-lg-none">
+                        <i class="ph-x"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /sidebar header -->
+        <!-- Main navigation -->
+        <div class="sidebar-section">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                <!-- Main -->
+                
+                <li class="nav-item">
+                    <a href="/" class="nav-link sidebar-mobile-main-toggle">
+                        <i class="ph-house"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+
+                <!-- Layout -->
+                @foreach(var opcion in Opciones)
+                {
+                    <MenuItem Opcion="opcion"></MenuItem>
+                }             
+@*                @if (!Opciones.Any())
+                {
+                    var opcion = new MenuOpcionModel();
+                    opcion.Nombre = "Alumnos";
+                    opcion.Url = "Administracion/Alumnos";
+                    opcion.Icono = "ph ph-student";
+                    <MenuItem Opcion="opcion"></MenuItem>
+
+                    var opcion2 = new MenuOpcionModel();
+                    opcion2.Nombre = "Notas";
+                    opcion2.Url = "Administracion/NotasAlumnos";
+                    opcion2.Icono = "ph ph-notepad";
+                    <MenuItem Opcion="opcion2"></MenuItem>
+
+                    var opcion3 = new MenuOpcionModel();
+                    opcion3.Nombre = "Notas Hijos";
+                    opcion3.Url = "MiEspacio/Notas";
+                    opcion3.Icono = "ph ph-notepad";
+                    <MenuItem Opcion="opcion3"></MenuItem>
+                }*@
+                <!-- /layout -->
+
+            </ul>
+        </div>
+        <!-- /main navigation -->
+
+    </div>
+    <!-- /sidebar content -->
+
+</div>
+<!-- /main sidebar -->
+
+@code{
+    [Parameter] public List<MenuOpcionModel> Opciones { get; set; } = new();
+
+}

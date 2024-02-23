@@ -1,0 +1,10 @@
+﻿@using System.Web
+@attribute [AllowAnonymous]
+@inject NavigationManager _navigationManager
+
+@code {
+    protected override void OnInitialized()
+    {
+        //_navigationManager.NavigateTo("/Login?returnUrl=" + HttpUtility.UrlEncode(_navigationManager.ToBaseRelativePath(_navigationManager.Uri)), forceLoad: false);
+    }
+}

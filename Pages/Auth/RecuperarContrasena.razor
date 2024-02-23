@@ -1,0 +1,78 @@
+﻿@layout PublicLayout
+@page "/RecuperarContrasena"
+@attribute [AllowAnonymous]
+@using RestauranteVirtual.Web.Components.Mensajes
+@using RestauranteVirtual.Web.Utils.Constants;
+
+
+<!-- Login form -->
+@if (_solicitudEnviada)
+{
+
+	<section>
+		<div class="imgBx">
+			<img src="../img/Terreno.jpg" />
+		</div>
+
+		<div class="contentBx">
+			<div class="formBx">
+				<div class="mb-3" style="text-align:center; color:black; font-size:20px">
+					Se han enviado los pasos por correo electrónico
+				</div>
+				<div class="mb-3" style="text-align:center">
+					<a href="/Login" style="color:black;font-size:20px">Ir al Login</a>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+	
+}
+else
+{
+	<section>
+		<div class="imgBx">
+			<img src="../img/Terreno.jpg" />
+		</div>
+
+
+		<div class="contentBx">
+			<div class="formBx">
+				<EditForm Model="_model" OnValidSubmit="HandleRecuperar">
+					<div>
+						<div class="mb-3" style="text-align:center; font-size:large">
+							<label class="form-label" style="color:black; font-weight:700">¿Olvidaste tu contraseña?</label>
+							<label class="form-label" style="color:black;text-align:center; font-size:medium">
+								No te preocupes. Escribe tu usuario y
+								te enviaremos las instrucciones para recuperarla.
+							</label>
+						</div>
+
+						<div class="mb-3">
+							<label class="form-label" style="color:black; font-weight:700">Usuario</label>
+							<div class="form-control-feedback form-control-feedback-start">
+								<InputText Class="form-control" @bind-Value="_model.UserName" />
+								<div class="form-control-feedback-icon">
+									<i class="ph-user-circle text-muted"></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="mb-3" style="text-align:center">
+
+							<a href="/Login" style="color:black">Regresar</a>
+							&nbsp;
+							<button type="submit" class="btn btn-outline-warning">Recuperar Contraseña</button>
+						</div>
+					</div>
+
+
+				</EditForm>
+			</div>
+		</div>
+
+	</section>
+
+}
+

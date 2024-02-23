@@ -1,0 +1,1566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA59+4O1HdtkOL7wK2Lm2cqAAAAAACAAAAAAAQZgAAAAEAACAAAACnNOFLcxPakXlF1ZD9cl7V7e0ozxbiM6x69q1isAOo1AAAAAAOgAAAAAIAACAAAAAUHBa51uvXM1UaWlecYfJ93faZzTdSH0ulndl08imSfSAAAAAHa+rWFPByrOffhUjjL9QCQdyh3MpT0MNpNDoJL0XQjkAAAAC+8dQ6etwh5qZk2eEQmvPM7S+T0szq1kem3SQn4S0zfe0S8wvuYq7SjNKdUeHWHr3Ys+MF4zOLfgP6BPOCntv3</EncryptedPassword>
+    <_PublishTargetUrl>ftp://intranetweb.somee.com/www.IntranetWeb.somee.com</_PublishTargetUrl>
+    <History>False|2023-12-11T23:21:52.1796778Z;True|2023-12-05T12:00:34.9548241-05:00;True|2023-11-24T15:16:37.8815315-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="web.config">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/all.min.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/animate.min.css">
+      <publishTime>04/04/2023 10:19:24</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-brands-400.eot">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-brands-400.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-brands-400.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-brands-400.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-brands-400.woff2">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-regular-400.eot">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-regular-400.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-regular-400.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-regular-400.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-regular-400.woff2">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-solid-900.eot">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-solid-900.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-solid-900.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-solid-900.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/fonts/fa-solid-900.woff2">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/fontawesome/styles.min.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icomoon/fonts/icomoon.eot">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icomoon/fonts/icomoon.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icomoon/fonts/icomoon.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icomoon/fonts/icomoon.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icomoon/selection.json">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icomoon/styles.min.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/material/fonts/material-icons.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/material/fonts/material-icons.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/material/fonts/material-icons.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/material/styles.min.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/phosphor/fonts/Phosphor.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/phosphor/fonts/Phosphor.ttf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/phosphor/fonts/Phosphor.woff">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/phosphor/selection.json">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/phosphor/styles.min.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/adobe.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/amazon.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/apple.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/bing.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/bp.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/debijenkorf.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/deutsche-post.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/dpd.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/dribbble.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/facebook.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/fedex.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/holiday-inn.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/honda.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/ing.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/klm.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/lufthanza.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/mercedes-benz.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/postnl.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/shell.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/spotify.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/tesla.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/texaco.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/tnt.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/twitter.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/ups.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/youtube.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/brands/zalando.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/amazon.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/cnn.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/dell.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/facebook.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/ibm.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/ing.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/microsoft.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/northface.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/transferwise.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/brands/uber.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/logos/1.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/logos/2.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/logos/3.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/logos/4.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face1.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face10.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face11.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face12.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face13.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face14.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face15.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face16.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face17.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face18.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face19.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face2.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face20.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face21.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face22.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face23.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face24.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face25.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face3.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face4.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face5.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face6.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face7.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face8.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/demo/users/face9.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/logo_icon.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/app.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/bootstrap.bundle.min.js">
+      <publishTime>03/04/2023 11:24:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/bootstrap/bootbox.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/bootstrap/bootstrap.bundle.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/bootstrap/components_modals.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/form_multiselect.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/jquery/jquery.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/forms/selects/bootstrap_multiselect.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/forms/selects/select2.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/forms/tags/tokenfield.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/notifications/bootbox.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/notifications/components_popovers.js">
+      <publishTime>11/07/2023 09:05:18</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/notifications/noty.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/notifications/sweet_alert.min.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-de.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-dk.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-es.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-fa.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-fi.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-fr.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-he.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-it.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-ja.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-nl.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-pt-br.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-ru.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-sv.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-tr.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/i18n/jquery.spectrum-zh-cn.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/color/spectrum.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/datepicker.min.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/pickers/daterangepicker.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/trees/fancytree.dnd5.js">
+      <publishTime>11/04/2023 09:53:58</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/trees/fancytree_all.min.js">
+      <publishTime>11/04/2023 09:53:58</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/trees/fancytree_childcounter.js">
+      <publishTime>11/04/2023 09:53:58</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales-all.min.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/af.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar-dz.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar-kw.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar-ly.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar-ma.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar-sa.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar-tn.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ar.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/az.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/bg.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/bn.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/bs.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ca.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/cs.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/cy.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/da.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/de-at.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/de.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/el.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/en-au.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/en-gb.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/en-nz.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/eo.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/es-us.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/es.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/et.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/eu.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/fa.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/fi.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/fr-ca.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/fr-ch.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/fr.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/gl.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/he.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/hi.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/hr.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/hu.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/hy-am.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/id.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/is.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/it.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ja.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ka.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/kk.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/km.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ko.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ku.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/lb.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/lt.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/lv.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/mk.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ms.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/nb.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ne.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/nl.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/nn.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/pl.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/pt-br.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/pt.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ro.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ru.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/si-lk.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sk.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sl.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sm.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sq.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sr-cyrl.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sr.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/sv.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ta-in.js">
+      <publishTime>02/05/2023 09:18:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/th.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/tr.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/ug.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/uk.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/uz.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/vi.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/zh-cn.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/locales/zh-tw.js">
+      <publishTime>02/05/2023 09:18:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/fullcalendar/main.min.js">
+      <publishTime>02/05/2023 09:18:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/moment/moment.min.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/vendor/ui/moment/moment_locales.min.js">
+      <publishTime>12/04/2023 11:47:04</publishTime>
+    </File>
+    <File Include="wwwroot/config.json">
+      <publishTime>05/12/2023 11:39:32</publishTime>
+    </File>
+    <File Include="wwwroot/css/app.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap/bootstrap.min.css">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap/bootstrap.min.css.map">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/FONT-LICENSE">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.eot">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.otf">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.svg">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.ttf">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/font/fonts/open-iconic.woff">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/ICON-LICENSE">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/css/open-iconic/README.md">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/icon-192.png">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/img/Foto Colegio.jpeg">
+      <publishTime>04/12/2023 10:15:14</publishTime>
+    </File>
+    <File Include="wwwroot/img/Foto Colegio.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/img/Logo Colegio Santillana.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/img/Logo y Nombre.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/index.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/IntranetColegio.Web.styles.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/sample-data/weather.json">
+      <publishTime>03/11/2023 18:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.boot.json">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.boot.json.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.boot.json.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.webassembly.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.webassembly.js.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/blazor.webassembly.js.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Blazored.LocalStorage.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Blazored.LocalStorage.dll.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Blazored.LocalStorage.dll.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.6.0.15.udlmw02h72.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.6.0.15.udlmw02h72.js.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.6.0.15.udlmw02h72.js.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.timezones.blat">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.timezones.blat.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.timezones.blat.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.wasm">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.wasm.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/dotnet.wasm.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Faso.Blazor.SpinKit.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Faso.Blazor.SpinKit.dll.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Faso.Blazor.SpinKit.dll.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt.dat">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt.dat.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt.dat.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_CJK.dat">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_CJK.dat.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_CJK.dat.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_EFIGS.dat">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_EFIGS.dat.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_EFIGS.dat.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_no_CJK.dat">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_no_CJK.dat.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/icudt_no_CJK.dat.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Common.dll">
+      <publishTime>05/12/2023 11:40:56</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Common.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Common.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Common.pdb.gz">
+      <publishTime>05/12/2023 11:40:59</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Dto.dll">
+      <publishTime>05/12/2023 11:40:56</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Dto.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Dto.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Dto.pdb.gz">
+      <publishTime>05/12/2023 11:40:59</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Web.dll">
+      <publishTime>05/12/2023 11:40:58</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Web.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Web.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/IntranetColegio.Web.pdb.gz">
+      <publishTime>05/12/2023 11:40:59</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Authorization.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Authorization.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.dll.br">
+      <publishTime>05/12/2023 11:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.CSharp.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.CSharp.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.CSharp.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Abstractions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Json.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Json.dll.br">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Configuration.Json.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.DependencyInjection.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Logging.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Options.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Options.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Options.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.Extensions.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Abstractions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Abstractions.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Abstractions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>12/07/2023 12:40:10</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.JsonWebTokens.dll.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.JsonWebTokens.dll.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Logging.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Logging.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Logging.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>12/07/2023 12:54:20</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Tokens.dll.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.IdentityModel.Tokens.dll.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.WebAssembly.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.WebAssembly.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/Microsoft.JSInterop.WebAssembly.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/netstandard.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/netstandard.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/netstandard.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Concurrent.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Concurrent.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Concurrent.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.NonGeneric.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.NonGeneric.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.NonGeneric.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Specialized.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Specialized.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Collections.Specialized.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.TypeConverter.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.TypeConverter.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ComponentModel.TypeConverter.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Data.Common.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Data.Common.dll.br">
+      <publishTime>05/12/2023 11:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Data.Common.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.TraceSource.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.TraceSource.dll.br">
+      <publishTime>05/12/2023 11:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Diagnostics.TraceSource.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.dll.br">
+      <publishTime>05/12/2023 11:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.dll.br">
+      <publishTime>05/12/2023 11:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Drawing.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>12/07/2023 12:32:56</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IdentityModel.Tokens.Jwt.dll.br">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IdentityModel.Tokens.Jwt.dll.gz">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.Compression.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.Compression.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.IO.Compression.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Expressions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Expressions.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Linq.Expressions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Memory.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.Json.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.Json.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Http.Json.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Mail.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Mail.dll.br">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Mail.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Net.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ObjectModel.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ObjectModel.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.ObjectModel.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.CoreLib.dll">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.CoreLib.dll.br">
+      <publishTime>05/12/2023 11:43:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.CoreLib.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Runtime.InteropServices.JavaScript.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Runtime.InteropServices.JavaScript.dll.br">
+      <publishTime>05/12/2023 11:43:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Runtime.InteropServices.JavaScript.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Uri.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Uri.dll.br">
+      <publishTime>05/12/2023 11:43:09</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Uri.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.dll.br">
+      <publishTime>05/12/2023 11:43:08</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.Linq.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.Linq.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Private.Xml.Linq.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.ILGeneration.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.ILGeneration.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.ILGeneration.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.Lightweight.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.Lightweight.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Emit.Lightweight.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Reflection.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.CompilerServices.Unsafe.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.CompilerServices.Unsafe.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.dll.br">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.InteropServices.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Numerics.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Numerics.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Numerics.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Formatters.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Formatters.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Formatters.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Runtime.Serialization.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Claims.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Claims.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Claims.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Algorithms.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Algorithms.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Cng.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Cng.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Cng.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Csp.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Csp.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Csp.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Encoding.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Encoding.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Encoding.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Primitives.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Primitives.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.Primitives.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.X509Certificates.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Security.Cryptography.X509Certificates.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encoding.Extensions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encoding.Extensions.dll.br">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encoding.Extensions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encodings.Web.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encodings.Web.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Encodings.Web.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Json.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Json.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.Json.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.RegularExpressions.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.RegularExpressions.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Text.RegularExpressions.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Thread.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Thread.dll.br">
+      <publishTime>05/12/2023 11:43:05</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Threading.Thread.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Web.HttpUtility.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Web.HttpUtility.dll.br">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Web.HttpUtility.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.Linq.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.Linq.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.Linq.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.ReaderWriter.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.ReaderWriter.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.ReaderWriter.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XDocument.dll">
+      <publishTime>05/12/2023 11:43:02</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XDocument.dll.br">
+      <publishTime>05/12/2023 11:43:04</publishTime>
+    </File>
+    <File Include="wwwroot/_framework/System.Xml.XDocument.dll.gz">
+      <publishTime>05/12/2023 11:43:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

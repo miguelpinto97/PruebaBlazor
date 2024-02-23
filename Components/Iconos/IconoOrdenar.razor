@@ -1,0 +1,30 @@
+﻿
+
+<a class="text-body" @onclick="RealizarAccion">
+    @if (esAscendente)
+    {
+        <i class="ph-sort-ascending"></i>
+    }
+    else
+    {
+        <i class="ph-sort-descending"></i>
+
+    }
+</a>
+
+
+@code{
+
+    [Parameter] public EventCallback Evento { get; set; }
+    public bool esAscendente = true;
+
+    public void RealizarAccion()
+    {
+        esAscendente = !esAscendente;
+
+        Evento.InvokeAsync((bool) esAscendente);
+        StateHasChanged();
+    }
+
+
+}

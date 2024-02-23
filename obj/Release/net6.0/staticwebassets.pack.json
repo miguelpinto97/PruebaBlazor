@@ -1,0 +1,673 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\obj\\Release\\net6.0\\build-gz\\NtnagdwC.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\obj\\Release\\net6.0\\scopedcss\\bundle\\RestauranteVirtual.Web.styles.css",
+      "PackagePath": "staticwebassets\\RestauranteVirtual.Web.styles.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\fontawesome\\styles.min.css",
+      "PackagePath": "staticwebassets\\assets\\icons\\fontawesome\\styles.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\assets\\icons\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\assets\\icons\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\assets\\icons\\icomoon\\selection.json"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\icomoon\\styles.min.css",
+      "PackagePath": "staticwebassets\\assets\\icons\\icomoon\\styles.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\material\\fonts\\material-icons.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\material\\fonts\\material-icons.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\material\\fonts\\material-icons.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons\\material\\fonts\\material-icons.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\material\\fonts\\material-icons.woff",
+      "PackagePath": "staticwebassets\\assets\\icons\\material\\fonts\\material-icons.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\material\\styles.min.css",
+      "PackagePath": "staticwebassets\\assets\\icons\\material\\styles.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\phosphor\\fonts\\Phosphor.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\phosphor\\fonts\\Phosphor.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\phosphor\\fonts\\Phosphor.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons\\phosphor\\fonts\\Phosphor.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\phosphor\\fonts\\Phosphor.woff",
+      "PackagePath": "staticwebassets\\assets\\icons\\phosphor\\fonts\\Phosphor.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\phosphor\\selection.json",
+      "PackagePath": "staticwebassets\\assets\\icons\\phosphor\\selection.json"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\icons\\phosphor\\styles.min.css",
+      "PackagePath": "staticwebassets\\assets\\icons\\phosphor\\styles.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\adobe.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\adobe.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\amazon.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\amazon.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\apple.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\apple.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\bing.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\bing.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\bp.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\bp.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\debijenkorf.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\debijenkorf.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\deutsche-post.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\deutsche-post.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\dpd.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\dpd.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\dribbble.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\dribbble.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\facebook.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\facebook.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\fedex.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\fedex.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\holiday-inn.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\holiday-inn.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\honda.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\honda.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\ing.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\ing.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\klm.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\klm.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\lufthanza.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\lufthanza.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\mercedes-benz.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\mercedes-benz.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\postnl.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\postnl.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\shell.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\shell.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\spotify.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\spotify.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\tesla.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\tesla.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\texaco.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\texaco.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\tnt.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\tnt.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\twitter.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\twitter.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\ups.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\ups.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\youtube.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\youtube.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\brands\\zalando.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\zalando.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\amazon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\amazon.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\cnn.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\cnn.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\dell.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\dell.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\facebook.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\facebook.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\ibm.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\ibm.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\ing.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\ing.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\microsoft.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\microsoft.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\northface.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\northface.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\transferwise.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\transferwise.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\brands\\uber.png",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\brands\\uber.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\logos\\1.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\logos\\1.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\logos\\2.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\logos\\2.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\logos\\3.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\logos\\3.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\logos\\4.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\logos\\4.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face1.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face10.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face10.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face11.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face11.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face12.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face12.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face13.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face13.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face14.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face14.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face15.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face15.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face16.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face16.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face17.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face17.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face18.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face18.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face19.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face19.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face2.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face20.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face20.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face21.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face21.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face22.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face22.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face23.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face23.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face24.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face24.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face25.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face25.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face3.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face4.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face5.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face6.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face7.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face8.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\demo\\users\\face9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\demo\\users\\face9.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\images\\logo_icon.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo_icon.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\bootstrap\\bootbox.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\bootbox.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\bootstrap\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\bootstrap\\components_modals.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\components_modals.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\form_multiselect.js",
+      "PackagePath": "staticwebassets\\assets\\js\\form_multiselect.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\AUTHORS.txt",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\AUTHORS.txt"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\external\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\external\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\index.html",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\index.html"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.structure.css",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.structure.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.structure.min.css",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.structure.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.theme.css",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.theme.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.theme.min.css",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui-1.13.2.custom\\jquery-ui.theme.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\forms\\selects\\bootstrap_multiselect.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\forms\\selects\\bootstrap_multiselect.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\forms\\selects\\select2.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\forms\\selects\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\forms\\tags\\tokenfield.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\forms\\tags\\tokenfield.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\notifications\\bootbox.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\notifications\\bootbox.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\notifications\\components_popovers.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\notifications\\components_popovers.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\notifications\\noty.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\notifications\\noty.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\notifications\\sweet_alert.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\notifications\\sweet_alert.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\trees\\fancytree.dnd5.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\trees\\fancytree.dnd5.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\trees\\fancytree_all.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\trees\\fancytree_all.min.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\assets\\js\\vendor\\trees\\fancytree_childcounter.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\trees\\fancytree_childcounter.js"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\config.json",
+      "PackagePath": "staticwebassets\\config.json"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\img\\Alitas Acevichadas.jpg",
+      "PackagePath": "staticwebassets\\img\\Alitas Acevichadas.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\img\\Alitas Acevichadas.svg",
+      "PackagePath": "staticwebassets\\img\\Alitas Acevichadas.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\img\\Celular.svg",
+      "PackagePath": "staticwebassets\\img\\Celular.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\img\\Foto.png",
+      "PackagePath": "staticwebassets\\img\\Foto.png"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\img\\Salchipapa Personal.jpg",
+      "PackagePath": "staticwebassets\\img\\Salchipapa Personal.jpg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\img\\Salchipapa Personal.svg",
+      "PackagePath": "staticwebassets\\img\\Salchipapa Personal.svg"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\netlify.toml",
+      "PackagePath": "staticwebassets\\netlify.toml"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\netlify.toml.bak",
+      "PackagePath": "staticwebassets\\netlify.toml.bak"
+    },
+    {
+      "Id": "C:\\Miguel Pinto\\Proyectos\\RestauranteVirtual\\RestauranteVirtual.Web\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.RestauranteVirtual.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.RestauranteVirtual.Web.props",
+      "PackagePath": "build\\RestauranteVirtual.Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.RestauranteVirtual.Web.props",
+      "PackagePath": "buildMultiTargeting\\RestauranteVirtual.Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.RestauranteVirtual.Web.props",
+      "PackagePath": "buildTransitive\\RestauranteVirtual.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

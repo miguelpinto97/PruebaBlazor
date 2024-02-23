@@ -1,0 +1,98 @@
+﻿@using RestauranteVirtual.Common.Constants
+<!-- Modal -->
+<!-- Centered modal -->
+<div id="@ModalId" class="modal fade @ModalClass" tabindex="-1" style="display:@ModalDisplay">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="@ModalHeader">
+				@switch (Accion)
+				{
+					case GeneralConstants.Acciones.CUSTOM:
+
+						<h5><i class="ph-warning me-2" data-bs-dismiss="modal" />@Titulo</h5>
+															
+						break;
+					default:
+						<h5 class="modal-title">@Accion</h5>
+						break;
+				}
+				<button type="button" class="@ModalClose" data-bs-dismiss="modal" @onclick="Close"></button>
+			</div>
+
+			<div class="modal-body">
+				
+				@switch (Accion)
+				{
+					case GeneralConstants.Acciones.CUSTOM:
+						<p>@Mensaje</p>
+						break;
+					default:
+						<p>¿Está seguro de @Accion este(os) @(TipoRegistro)(s)?</p>
+						break;
+				}
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-link" data-bs-dismiss="modal" @onclick="Close">Cerrar</button>
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="RealizarAccion">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+@if (ShowBackdrop)
+{
+	<div class="modal-backdrop fade show"></div>
+}
+<!-- /centered modal -->
+@code {
+	[Parameter] public string TipoRegistro { get; set; } = "registro";
+	[Parameter] public string ModalId { get; set; } = "";
+	[Parameter] public string Accion { get; set; } = "";
+	[Parameter] public string Mensaje { get; set; } = "";
+	[Parameter] public string Titulo { get; set; } = "";
+	[Parameter] public EventCallback Metodo { get; set; }
+	private string ModalDisplay = "none;";
+	private string ModalClass = "";
+	private bool ShowBackdrop = false;
+	private string ModalHeader = "modal-header";
+	private string ModalClose = "btn-close";
+
+	public void RealizarAccion()
+	{
+		Metodo.InvokeAsync();
+	}
+
+	public void Open(string titulo, string mensaje)
+	{
+		Titulo = titulo;
+		Mensaje = mensaje;
+		Open();
+	}
+
+	public void Open()
+	{
+		ModalDisplay = "block";
+		ModalClass = "show";
+		ShowBackdrop = true;
+		if (Accion == GeneralConstants.Acciones.CUSTOM)
+		{
+			ModalHeader = "modal-header bg-warning text-white";
+			ModalClose = "btn-close btn-close-white";
+
+		}
+		else
+		{
+			ModalHeader = "modal-header";
+			ModalClose = "btn-close";
+		};
+	}
+
+	public void Close()
+	{
+		ModalDisplay = "none";
+		ModalClass = string.Empty;
+		ShowBackdrop = false;
+	}
+
+}

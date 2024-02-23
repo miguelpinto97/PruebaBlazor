@@ -1,0 +1,106 @@
+﻿@page "/CambiarContrasena"
+@page "/CrearContrasena"
+@layout PublicLayout
+
+@using RestauranteVirtual.Web.Components.Mensajes
+@using RestauranteVirtual.Web.Utils.Constants;
+@attribute [AllowAnonymous]
+
+<!-- Login form -->
+
+@if (_cambioRealizado)
+{
+
+	<section>
+
+		<div class="imgBx">
+			<img src="../img/Terreno.jpg" />
+		</div>
+
+
+		<div class="contentBx">
+			<div class="formBx">
+				<div class="mb-3" style="text-align:center; color:black; font-size:20px">
+					Se ha actualizado su contraseña correctamente
+				</div>
+				<div class="mb-3" style="text-align:center">
+					<a href="/Login">
+						<button type="button" class="btn btn-outline-warning">Ir a Login</button>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+}
+else
+{
+	<section>
+
+		<div class="imgBx">
+			<img src="../img/Terreno.jpg" />
+		</div>
+
+
+		<div class="contentBx">
+		<div class="formBx">
+			<EditForm Model="_model" OnValidSubmit="HandleCambiar">
+					<div>
+						<PanelMensaje Mensaje="@_mensajeError" TipoPanel="@UserInterfaceConstants.TipoPanel.ERROR"></PanelMensaje>
+						<div class="mb-3" style="text-align:center">
+
+							<img src="/img/Logo Entidad Santillana.png" width="150" height="50" />
+						</div>
+
+						<div class="mb-3" style="text-align:center; font-size:large">
+							<label class="form-label" style="color:black; font-weight:700">Cambiar Contraseña</label>
+							<label class="form-label" style="color:black;text-align:center; font-size:medium">
+								Tu nueva contraseña debe contener como mínimo 6 caracteres, entre letras y números.
+							</label>
+
+						</div>
+
+
+						<div class="mb-3">
+							<label class="form-label" style="color:black; font-weight:700">Nueva Contraseña</label>
+							<div class="form-control-feedback form-control-feedback-start">
+								<InputText Class="form-control" @bind-Value="_model.Password" type="password" />
+								<div class="form-control-feedback-icon">
+									<i class="ph-lock text-muted"></i>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="mb-3">
+							<label class="form-label" style="color:black; font-weight:700">Confirmar Contraseña</label>
+							<div class="form-control-feedback form-control-feedback-start">
+								<InputText Class="form-control" @bind-Value="_model.RepeatPassword" type="password" />
+								<div class="form-control-feedback-icon">
+									<i class="ph-lock text-muted"></i>
+
+								</div>
+							</div>
+
+							&nbsp;
+
+						</div>
+
+						<div class="mb-3" style="text-align:center">
+							<button type="submit" class="btn btn-outline-warning">Guardar Cambios</button>
+						</div>
+
+
+					</div>
+
+			</EditForm>
+		</div>
+		</div>
+
+	</section>
+
+}
+

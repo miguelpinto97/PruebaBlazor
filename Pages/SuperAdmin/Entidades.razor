@@ -1,0 +1,271 @@
+﻿@page "/Entidads"
+@inject HttpClient Http
+@inject IJSRuntime JS
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using RestauranteVirtual.Common.Utils;
+@using RestauranteVirtual.Web.Components.Iconos
+@using RestauranteVirtual.Web.Components.Busqueda
+@using RestauranteVirtual.Web.Components.Mensajes
+@using RestauranteVirtual.Web.Components.Modals
+@using RestauranteVirtual.Web.Components.Validacion
+@using RestauranteVirtual.Web.Utils.Constants
+@using RestauranteVirtual.Web.Components.TreeCheckbox
+
+
+<!-- Page header -->
+<div class="page-header page-header-light shadow">
+	<div class="page-header-content d-lg-flex">
+		<div class="d-flex">
+			<h4 class="page-title mb-0">
+				Administración de Entidads
+			</h4>
+
+			<a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="page-header-content d-lg-flex border-top">
+		<div class="d-flex">
+			<div class="breadcrumb py-2">
+				<a href="index.html" class="breadcrumb-item"><i class="ph-house"></i></a>
+				<a href="#" class="breadcrumb-item">Administración</a>
+				<span class="breadcrumb-item active">Entidads</span>
+			</div>
+
+			<a href="#breadcrumb_elements" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse">
+				<i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
+			</a>
+		</div>
+
+	</div>
+</div>
+<!-- /page header -->
+<!-- Content area -->
+<div class="content">
+	<!-- Filters -->
+
+	<div class="navbar navbar-expand-lg shadow rounded py-1 mb-3">
+		<div class="container-fluid mb-2 mt-2">
+			<div class="col-lg-5">
+				<div class="form-control-feedback form-control-feedback-end flex-fill mx-2">
+					<input type="search" class="form-control" @bind="_terminoBusqueda" @bind:event="oninput" @onkeypress="@(e => FiltroGeneral(e))">
+					<div class="form-control-feedback-icon">
+						<i class="ph-magnifying-glass opacity-50"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3" style="padding-left: 15px">
+				<BotonFiltroAvanzado TargetCollapse="#navbar-filter"></BotonFiltroAvanzado>
+			</div>
+			<div class="col-lg-4" style="text-align:right">
+				<div style="display:inline-block">
+					<button type="button" class="btn btn-light" @onclick=GenerarNuevo>
+						<i class="ph-plus-circle me-2"></i>
+						Nuevo
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Filters -->
+
+
+	<!-- /table -->
+	@if (_elementosPorPagina == null)
+	{
+		<p><em>Loading...</em></p>
+	}
+	else
+	{
+
+		<EditForm EditContext="_editContext">
+			<CustomFormValidator @ref="customFormValidator"></CustomFormValidator>
+			<PanelMensaje Mensaje="@_mensajeError" TipoPanel="@UserInterfaceConstants.TipoPanel.ERROR"></PanelMensaje>
+			<div class="navbar shadow rounded py-1 mb-3">
+				<div class="table-responsive w-100">
+					<table class="table table-sm dataTable">
+						<thead>
+							<tr>
+								<th>
+									Código
+									<HeaderOrdenar Columna="Id" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Id", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+									Nombre
+									<HeaderOrdenar Columna="Nombre" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Nombre", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+									Estado
+									<HeaderOrdenar Columna="Estado" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("Estado", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+									Actualizado por
+									<HeaderOrdenar Columna="UsuarioModifica" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("UsuarioModifica", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+									Última actualización
+									<HeaderOrdenar Columna="FechaModifica" ColumnaSeleccionada="@_columnaOrdenada" Evento='e=>Ordenar("FechaModifica", bool.Parse(e.ToString()))'></HeaderOrdenar>
+								</th>
+								<th>
+
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							@if (esNuevo)
+							{
+								<tr>
+									<td>
+									</td>
+									<td>
+										<InputText id="nombre" @bind-Value="_perfilModel.Nombre" class="form-control"></InputText>
+										<CustomValidationMessage For="@(() => _perfilModel.Nombre)" Class="invalid-feedback" />
+									</td>
+									<td>
+										<InputSelect class="form-select" @bind-Value="_perfilModel.EstadoId">
+											<option value="">Seleccione</option>
+											@foreach (var estado in _baseInfo.Estados)
+											{
+												<option value="@estado.Key">@estado.Value</option>
+											}
+										</InputSelect>
+										<CustomValidationMessage For="@(() => _perfilModel.EstadoId)" Class="invalid-feedback" />
+									</td>
+									<td>
+									</td>
+									<td>
+									</td>
+									<td>
+										<div class="d-inline-flex ">
+
+											<a class="text-body acciones" @onclick=GuardarCambios>
+												<i class="ph-floppy-disk"></i>
+											</a>
+											<a class="text-body mx-2 acciones" @onclick=Cancelar>
+												<i class="ph-x"></i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							}
+							@foreach (var reg in _elementosPorPagina)
+							{
+								<tr>
+									@if (IdEdicion == reg.Id)
+									{
+										<td>
+											@reg.Id
+										</td>
+										<td>
+											<InputText id="nombre" @bind-Value="_perfilModel.Nombre" class="form-control"></InputText>
+											<CustomValidationMessage For="@(() => _perfilModel.Nombre)" Class="invalid-feedback" />
+										</td>
+										<td>
+											<InputSelect class="form-select" @bind-Value="_perfilModel.EstadoId">
+												<option value="">Seleccione</option>
+												@foreach (var estado in _baseInfo.Estados)
+												{
+													<option value="@estado.Key">@estado.Value</option>
+												}
+											</InputSelect>
+											<CustomValidationMessage For="@(() => _perfilModel.EstadoId)" Class="invalid-feedback" />
+										</td>
+@*										<td>
+											@perfil.UsuarioModifica
+										</td>
+										<td>
+											@perfil.FechaModifica.ToFechaHoraLocal().ToStringFechaHora()
+										</td>*@
+										<td>
+											<div class="d-inline-flex ">
+
+												<a class="text-body acciones" @onclick=GuardarCambios>
+													<i class="ph-floppy-disk"></i>
+												</a>
+												<a class="text-body mx-2 acciones" @onclick=Cancelar>
+													<i class="ph-x"></i>
+												</a>
+											</div>
+										</td>
+									}
+									else
+									{
+										<td>@reg.Id</td>
+										<td>@reg.Nombre</td>
+@*										<td>@perfil.Estado</td>
+										<td>@perfil.UsuarioModifica</td>
+										<td>@perfil.FechaModifica.ToFechaHoraLocal().ToStringFechaHora()</td>*@
+										<td>
+											<div class="d-inline-flex ">
+												<a class="text-body acciones" title="Modificar" @onclick="e=>ActivarEdicion(reg.Id)">
+													<i class="ph-pen"></i>
+												</a>
+												<a class="text-body mx-2 acciones" title="Configurar permisos" data-bs-toggle="modal" data-bs-target="#modalPermisos"
+									   @onclick="() => CargarPermisos(reg.Id)">
+													<i class="ph-gear"></i>
+												</a>
+												<a class="text-body acciones" title="Eliminar"
+						data-bs-toggle="modal"
+						data-bs-target="#modalConfirmacion"
+									   @onclick="e=>ConfirmarEliminacion(reg.Id)">
+													<i class="ph-trash"></i>
+												</a>
+
+
+											</div>
+										</td>
+									}
+								</tr>
+							}
+						</tbody>
+					</table>
+
+				</div>
+
+				<Paginacion @ref="_paginacion" PaginaSeleccionada="CambiarPagina"></Paginacion>
+
+			</div>
+		</EditForm>
+
+		<!-- /table -->
+	}
+
+	<!-- Modal -->
+	<!-- Centered modal -->
+	<div id="modalPermisos" class="modal fade" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Actualizar permisos</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<PanelMensaje Mensaje="@_mensajeErrorPermisos" TipoPanel="@UserInterfaceConstants.TipoPanel.ERROR"></PanelMensaje>
+					<div class="tree-checkbox-hierarchical border rounded p-3" id="treePermisos">
+						<ul class="mb-0">
+							@foreach (var nodo in _nodosPermisos)
+							{
+								<TreeNodeCheckbox Nodo="nodo"></TreeNodeCheckbox>
+							}
+						</ul>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-bs-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-primary" @onclick="GuardarPermisos">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /centered modal -->
+
+	<ModalConfirmacion ModalId="modalConfirmacion" Accion="@_accion" Metodo="Eliminar" />
+</div>
+<!-- /content area -->

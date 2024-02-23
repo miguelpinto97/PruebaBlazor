@@ -1,0 +1,109 @@
+﻿@page "/DetallePedido"
+@page "/DetallePedido/{PedidoId:int}"
+
+
+@if(Pedido != null)
+{
+    if(Pedido.Productos != null)
+    {
+        @if (Pedido.Productos.Any())
+        {
+            <h5 style="padding-left: 10px;padding-top: 10px;margin-bottom: 0 !important;">
+                Resumen Pedido
+            </h5>
+            
+            <!-- Modal -->
+            <!-- Centered modal -->
+                <div >
+                <div class="product-card" style="padding: 15px;background-color: white;margin: 10px;">
+
+
+                    <div class="modal-body" style="overflow-y: auto;height: calc(100vh - 280px);">
+                            @foreach (var producto in Pedido.Productos)
+                            {
+
+                                <div class="product-card" style="width:100%;margin:auto;display:flex">
+                                    <img src=@producto.RutaImg alt="Product Image" style="width:40%">
+                                    <div class="product-info" style="width:auto">
+                                        <h2 class="product-title">@producto.ProductoNombre</h2>
+                                        <p class="product-price">S/ @producto.PrecioProducto</p>
+                                        <p class="product-description">@producto.ProductoDescripcion</p>
+                        
+                                    </div>
+                                </div>
+                                <div style="display:flex;    justify-content: space-around;">
+                                    <div class="col-6 p-1">
+                                        <h5 style="margin-top: 10px;">Cremas:</h5>
+                                        <div class="product-card" style="padding:10px">
+                                            @if (producto.Cremas.Any())
+                                            {
+                                                @foreach (var crema in producto.Cremas)
+                                                {
+
+                                                    <div class="number-input-container">
+                                                        <span class="number-input-name">@crema.CremaDescripcion (@crema.Cantidad)</span>
+                                                    </div>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <div class="number-input-container">
+                                                    <span class="number-input-name">Ninguna</span>
+                                                </div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-1">
+                                        <h5 style="margin-top: 10px;">Adicionales:</h5>
+                                        <div class="product-card" style="padding:10px">
+                                            @if (producto.Extras.Any())
+                                            {
+                                                @foreach (var extra in producto.Extras)
+                                                {
+
+                                                    <div class="number-input-container">
+                                                        <span class="number-input-name">@extra.ExtraDescripcion (@extra.Cantidad)</span>
+                                                    </div>
+                                                }
+                                                <div class="number-input-container">
+                                                    <span class="number-input-name" style="font-weight:400">Extras: S/ @producto.Extras.Sum(x=> x.Precio * x.Cantidad)</span>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="number-input-container">
+                                                    <span class="number-input-name">Ninguno</span>
+                                                </div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-card" style="padding:10px">
+                                    <h6 style="margin-bottom:0px !important;color: #117528">Subtotal: <span>S/ @producto.SubTotal</span></h6>
+                                </div>
+
+
+                            }
+
+
+
+
+
+                        </div>                        <div class="modal-footer">
+                            <span class="btn btn-buy btn-complete">Total Pedido S/ @Pedido.PrecioTotal</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            <!-- /centered modal -->
+        }
+
+    }
+}
+
+
+

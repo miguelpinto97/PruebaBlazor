@@ -1,0 +1,11 @@
+﻿@using System.Linq.Expressions;
+@using RestauranteVirtual.Web.Utils;
+@typeparam TValue
+@inherits MessageValidatorBase<TValue>;
+
+@foreach (var message in ValidationMessages)
+{
+    <div class="@Class">
+        @message
+    </div>
+}

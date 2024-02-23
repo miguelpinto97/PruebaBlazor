@@ -1,0 +1,25 @@
+﻿@using RestauranteVirtual.Web.Utils.Constants
+
+@if (!string.IsNullOrEmpty(Mensaje))
+{
+	@if(TipoPanel == UserInterfaceConstants.TipoPanel.ERROR)
+	{
+		<div class="alert alert-danger">
+			@Mensaje
+		</div>
+	}
+	else
+	{
+		<div class="alert alert-info">
+			@Mensaje
+		</div>
+	}
+}
+
+@code {
+	[Parameter]
+	public string Mensaje { get; set; }
+
+	[Parameter]
+	public string TipoPanel { get; set; }
+}

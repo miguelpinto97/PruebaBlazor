@@ -1,0 +1,165 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = IntranetColegio.Web
+build_property.RootNamespace = IntranetColegio.Web
+build_property.ProjectDir = C:\Miguel Pinto\Proyectos\IntranetAPI\IntranetColegio.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Miguel Pinto\Proyectos\IntranetAPI\IntranetColegio.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Busqueda/BotonFiltroAvanzado.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXNxdWVkYVxCb3RvbkZpbHRyb0F2YW56YWRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Busqueda/Paginacion.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXNxdWVkYVxQYWdpbmFjaW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Controles/InputMultiSelect.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sZXNcSW5wdXRNdWx0aVNlbGVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Controles/InputTag.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250cm9sZXNcSW5wdXRUYWcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Iconos/HeaderOrdenar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJY29ub3NcSGVhZGVyT3JkZW5hci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Mensajes/PanelMensaje.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZW5zYWplc1xQYW5lbE1lbnNhamUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Mensajes/ValidacionPermisosVista.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZW5zYWplc1xWYWxpZGFjaW9uUGVybWlzb3NWaXN0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/MenuItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZW51SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Modals/ModalConfirmacion.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcTW9kYWxDb25maXJtYWNpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/TreeCheckbox/TreeNodeCheckbox.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUcmVlQ2hlY2tib3hcVHJlZU5vZGVDaGVja2JveC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Validacion/CustomFormValidator.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWYWxpZGFjaW9uXEN1c3RvbUZvcm1WYWxpZGF0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Validacion/CustomValidationMessage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWYWxpZGFjaW9uXEN1c3RvbVZhbGlkYXRpb25NZXNzYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Administracion/Parametros.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYWNpb25cUGFyYW1ldHJvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Administracion/Personas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYWNpb25cUGVyc29uYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Administracion/PersonasCrearEditar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYWNpb25cUGVyc29uYXNDcmVhckVkaXRhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Auth/CambiarContrasena.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxDYW1iaWFyQ29udHJhc2VuYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Auth/RecuperarContrasena.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWN1cGVyYXJDb250cmFzZW5hLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/LoginRedirect.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5SZWRpcmVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Notificaciones/EnviarNotificacion.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZpY2FjaW9uZXNcRW52aWFyTm90aWZpY2FjaW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Padres/AsistenciaAlumnoHijo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFkcmVzXEFzaXN0ZW5jaWFBbHVtbm9IaWpvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Padres/NotasAlumnoHijo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFkcmVzXE5vdGFzQWx1bW5vSGlqby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Profesores/AlumnosAsistencias.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmVzb3Jlc1xBbHVtbm9zQXNpc3RlbmNpYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Profesores/AlumnosNotas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmVzb3Jlc1xBbHVtbm9zTm90YXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/Seguridad/Perfiles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VndXJpZGFkXFBlcmZpbGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Pages/SuperAdmin/Colegios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwZXJBZG1pblxDb2xlZ2lvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Shared/Navbar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Shared/PublicLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFB1YmxpY0xheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Shared/Sidebar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZGViYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Shared/Spinner.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNwaW5uZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Components/Iconos/IconoOrdenar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJY29ub3NcSWNvbm9PcmRlbmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-unvh6kxtgo
+
+[C:/Miguel Pinto/Proyectos/IntranetAPI/IntranetColegio.Web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lrvmyosulx
